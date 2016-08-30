@@ -1,0 +1,250 @@
+/*for limiwu.com*/
+body,
+#single,
+.footer,
+#single .breadcrumb{
+	background-color: #eee;   
+    background-image: -moz-linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent);   
+    background-size: 6px 6px;
+    color: #555;
+}
+.post-list{
+	border-color: #000;
+}
+.post-box{
+	background-color: #eee;
+	border-color: #fff;
+	-webkit-box-shadow: 0 1px 5px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0 1px 5px rgba(0,0,0,0.2);
+	-o-box-shadow: 0 1px 5px rgba(0,0,0,0.2);
+	-ms-box-shadow: 0 1px 5px rgba(0,0,0,0.2);
+	box-shadow: 0 1px 5px rgba(0,0,0,0.2);
+}
+
+.cat{
+	background-color: #428bca;
+}
+.top-box .cat{
+	background-color: #c9302c;
+}
+.cat>a,
+.cat>a:hover,
+.cat>a:visited,
+.cat>a:active{
+	color: #fff;
+}
+.tim>a{
+	color: #fff;
+	text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+}
+.tit{
+	background-color: rgba(0,0,0,0.25);
+}
+.post-box:hover .tit{
+	background-color: rgba(0,0,0,0.6);
+}
+.tit>p>a{
+	color:#ddd;
+}
+.tit>hr{
+	border:none;
+	border-top:2px dotted #ccc;
+}
+.tit>h3{
+	background-color: rgba(0,0,0,0.2);
+}
+.top-box .tit>h3{
+	background-color: rgba(0,0,0,0.5);
+}
+.post-box:hover .tit h3{
+	background-color:rgba(0,0,0,0);
+}
+.tit>h3>a{
+	color:rgb(210, 210, 210);
+}
+.post-box:hover .tit>h3>a{
+	color:rgb(255, 255, 255);
+}
+.bottom{
+	background-color:#428bca;
+}
+.bottom-div{
+	color: #fff;
+}
+.bottom-a,
+.bottom-a:hover,
+.bottom-a:link,
+.bottom-a:visited,
+.bottom-a:active{
+	color:rgb(251, 248, 0);
+}
+.footer a{
+	color: #777;
+}
+@media (max-width: 749px){
+	.footer h5{
+		border-top: 1px dotted rgb(200, 200, 200);
+	}
+}
+.single-left,
+.list-left,
+.widget{
+	background-color: #f8f8f8;
+}
+@media (max-width: 749px){
+	#single,
+	.single-left,
+	.single-right{
+		background-color:#f0f0f0;
+		background-image:none;
+	}
+}
+.single-left,
+.list-left{
+	color:rgb(51, 51, 51);
+}
+.Subtitle,
+.time{
+	color:rgb(119,119,119);
+}
+.time{
+	border-bottom: 1px dotted #ddd;
+}
+@media (max-width: 749px){
+	.time{
+		border-bottom:none;
+	}
+}
+.flip{
+	border-top: 1px dotted rgb(200, 200, 200);
+	border-bottom: 1px dotted rgb(200, 200, 200);
+}
+.next-pre-text{
+	color: #777;
+}
+.next-pre-text a{
+	color: rgb(51, 51, 51)
+}
+.next-pre-text a:hover,
+.next-pre-text a:focus{
+	color: #23527c;
+}
+.more-text-box{
+	border:5px solid rgb(255, 255, 255);
+	-webkit-box-shadow: 0 1px 5px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0 1px 5px rgba(0,0,0,0.2);
+	-o-box-shadow: 0 1px 5px rgba(0,0,0,0.2);
+	-ms-box-shadow: 0 1px 5px rgba(0,0,0,0.2);
+	box-shadow: 0 1px 5px rgba(0,0,0,0.2);
+}
+.more-text-box p{
+	background-color: rgba(30,30,30,0.7);
+}
+.more-text-box p a,
+.more-text-box p{
+	color: #fff;
+}
+.more-text-box p.BMT-title a{
+	border:5px solid rgba(255,255,255,0.7);
+}
+.comment-post{
+	border-bottom:2px dotted rgb(200, 200, 200);
+}
+.comment-box img{
+	border:1px solid rgb(200, 200, 200);
+}
+.media-heading b{
+	color: #bbb;
+}
+@media (min-width: 749px){
+	.single-left,
+	.list-left,
+	.widget{
+		-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+		-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+		-o-box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+		-ms-box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+		box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+	}
+}
+.widget h5{
+	background-color:#e7e7e7;
+	color: #555;
+}
+#tbCalendar td:hover,
+#tbCalendar th:hover {
+	background-color: #ddd;
+}
+#divFavorites li,
+#divLinkage li,
+#divCatalog li,
+#divTags li{
+	color: #666;
+	background: #f5f5f5;
+	border: 1px solid #eaeaea;
+}
+#divFavorites a,
+#divLinkage a,
+#divCatalog a,
+#divTags a{
+	color: #666;
+}
+#divFavorites li:hover,
+#divLinkage li:hover,
+#divCatalog li:hover,
+#divTags li:hover{
+	background-color:#98699b;
+	color: rgb(245,245,245);
+}
+#divFavorites li:hover a,
+#divLinkage li:hover a,
+#divCatalog li:hover a,
+#divTags li:hover a{
+	color: rgb(245,245,245);
+}
+.list-left{
+	color: #555;
+}
+.list-left h4 small{
+	color: #98699b;
+}
+.list-left .media-body h6 a,
+.list-left .media-body h6{
+	color: #777;
+}
+.list-left .media-body h6 a:hover{
+	color: #428bca;
+}
+.list-left>ul>li{
+	border-bottom:1px dotted #ddd;
+}
+.list-left>ul>li:last-child{
+	border-bottom:none;
+}
+.media-box:after{
+	box-shadow:inset 0 0 0 0 rgba(255,255,255,0);
+}
+.media-box:hover:after{
+	box-shadow:inset 0 0 0 6px rgba(255,255,255,0.3);
+}
+.istop a{
+	color: #555;
+}
+.istop a:hover{
+	color:#98699b;
+}
+#divPrevious li a{
+	color: #fff;
+}
+#divPrevious p{
+	background-color: rgba(0, 0, 0,0.5);
+}
+.newsList{
+	border: solid 1px #eee;
+}
+#divPrevious li:hover .newsList{
+	border: solid 1px #98699b;
+}
+#divPrevious li:hover p{
+	background-color:#98699b;
+}
