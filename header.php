@@ -9,15 +9,7 @@
  * @since paipk1 1.0
  */
 ?><!DOCTYPE html>
-<!--[if IE 7]>
-<html class="ie ie7" <?php language_attributes(); ?>>
-<![endif]-->
-<!--[if IE 8]>
-<html class="ie ie8" <?php language_attributes(); ?>>
-<![endif]-->
-<!--[if !(IE 7) & !(IE 8)]><!-->
 <html <?php language_attributes(); ?>>
-<!--<![endif]-->
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
@@ -51,20 +43,3 @@
 <![endif]-->
 </head>
 <?php flush(); ?>
-<body id="index-pic" <?php body_class(); ?>>
-<div class="container">
-	<?php include (TEMPLATEPATH . '/template-parts/nav.php'); ?>
-	<div class="head row">
-		<div class="col-sm-4 hidden-xs">
-			<img src="<?php header_image(); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
-		</div>
-		<div class="col-sm-5 col-sm-offset-3 col-md-4 col-md-offset-4 search-box hidden-xs">
-			<form class="navbar-form navbar-left" role="search">
-				<div class="form-group">
-					<input type="text" class="form-control" placeholder="输入搜索内容">
-				</div>
-				<button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-search"></span></button>
-			</form>
-		</div>
-	</div>
-</div>

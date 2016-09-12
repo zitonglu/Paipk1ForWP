@@ -48,5 +48,4 @@ function post_views($before = '', $after = '', $echo = 1){
   else return $views;
 }
 
-
 ?>

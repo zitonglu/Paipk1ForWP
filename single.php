@@ -1,13 +1,4 @@
-<?php
-/**
- * @link https://codex.wordpress.org/Template_Hierarchy
- *
- * @package WordPress
- * @subpackage Twenty_Fourteen
- * @since Twenty Fourteen 1.0
- */
-get_header(); ?>
-<body id="index-pic" <?php body_class(); ?>>
+<?php get_header(); ?>
 <div class="container">
 	<?php include (TEMPLATEPATH . '/template-parts/nav.php'); ?>
 	<div class="head row">
@@ -25,17 +16,29 @@ get_header(); ?>
 	</div>
 </div>
 
+<div class="container hidden-xs single-nav">
+	<ol class="breadcrumb">
+	  <li><a href="<?php echo home_url('/'); ?>">首页</a></li> 
+<?php
+	$thisCategory = get_the_category();
+	if($thisCategory[0]){
+	echo '<li><a href="'.get_category_link($thisCategory[0]->term_id ).'" title="'.$thisCategory[0]->cat_name.'">'.$thisCategory[0]->cat_name.'</a></li>';
+	}
+?>
+	  <li class="active">正文</li>
+	</ol>
+</div>
+
 <div class="container">
 	<div class="row single-body">
 		<div class="col-md-9 single-box">
-			<div class="list-left">
-				<ul class="media-list">
-<?php if(have_posts()) : ?>
-<?php while(have_posts()) : the_post(); ?>
-	<?php get_template_part( 'template-parts/content' ); ?>
-<?php endwhile; ?>
-<?php endif; ?>
-				</ul>
+			<div class="single-left">
+		<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+			<h1><?php the_title(); ?></h1>
+			<p class="time"><?php the_time('Y年m月d日 h:i'); ?><?php the_tags(' 标签：',' ') ?></p>
+			<?php the_content(); ?>
+			<?php comments_template( '', true ); ?>
+		<?php endwhile; /* end loop */ ?>
 			</div>
 		</div>
 	</div>
