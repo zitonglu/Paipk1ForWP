@@ -6,8 +6,16 @@
  */
 ?>
 
-<?php if ( is_active_sidebar( 'sidebar-1' )  ) : ?>
-	<aside id="secondary" class="sidebar widget-area" role="complementary">
+<div class="col-md-3 single-box">
+	<div class="single-right">
+<?php if ( is_single() && is_active_sidebar( 'sidebar-2' )) { ?>
+	<div class="widget">
+		<?php dynamic_sidebar( 'sidebar-2' ); ?>
+	</div>
+<?php }else{ ?>
+	<div class="widget">
 		<?php dynamic_sidebar( 'sidebar-1' ); ?>
-	</aside><!-- .sidebar .widget-area -->
-<?php endif; ?>
+	</div>
+<?php }; ?>
+	</div>
+</div>
