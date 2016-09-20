@@ -50,9 +50,6 @@ body,
 	border-top:2px dotted #ccc;
 }
 .tit>h3{
-	background-color: rgba(0,0,0,0.2);
-}
-.top-box .tit>h3{
 	background-color: rgba(0,0,0,0.5);
 }
 .post-box:hover .tit h3{

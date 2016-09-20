@@ -10,7 +10,7 @@ get_header(); ?>
 <body id="index-pic" <?php body_class(); ?>>
 <div class="container">
 	<?php include (TEMPLATEPATH . '/template-parts/nav.php'); ?>
-	<div class="head row">
+	<!-- <div class="head row">
 		<div class="col-sm-4 hidden-xs">
 			<img src="<?php header_image(); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
 		</div>
@@ -22,24 +22,16 @@ get_header(); ?>
 				<button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-search"></span></button>
 			</form>
 		</div>
-	</div>
+	</div> -->
 </div>
 
-<div class="container">
-	<div class="row single-body">
-		<div class="col-md-9 single-box">
-			<div class="list-left">
-				<ul class="media-list">
-<?php if(have_posts()) : ?>
-<?php while(have_posts()) : the_post(); ?>
-	<?php get_template_part( 'template-parts/content' ); ?>
-<?php endwhile; ?>
-<?php endif; ?>
-				</ul>
-			</div>
-		</div>
-		<?php get_sidebar(); ?>
-	</div>
+<div class="container body">
+	<?php if(have_posts()) : ?>
+	<?php while(have_posts()) : the_post(); ?>
+		<?php get_template_part( 'template-parts/content' ); ?>
+	<?php endwhile; ?>
+	<?php endif; ?>
+	<div class="clearfix"></div>
 </div>
 
 <?php get_footer(); ?>
