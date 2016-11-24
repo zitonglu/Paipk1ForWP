@@ -1,14 +1,12 @@
 <?php
 /**
- * The Header for our theme
- *
- * Displays all of the <head> section and everything up till <div id="main">
- *
+ * The Header for theme
  * @package WordPress
  * @subpackage paipk1
  * @since paipk1 1.0
  */
-?><!DOCTYPE html>
+?>
+<!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
