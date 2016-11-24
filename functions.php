@@ -3,7 +3,7 @@
  * paipk1 setup.
  *
  * Sets up theme defaults and registers the various WordPress features that
- * i-max supports.
+ * paipk1 supports.
  *
  * @uses load_theme_textdomain() For translation/localization support.  
  * @uses add_theme_support() To add support for post thumbnails.
@@ -27,8 +27,15 @@ function paipk1_setup() {
    * "standard" posts and pages.
    */
   add_theme_support('post-thumbnails');
+  /*
+   * This theme supports all available post formats by default.
+   */
+  add_theme_support('post-formats', array('aside', 'image', 'video', 'audio', 'quote', 'link', 'gallery',) );
+  register_nav_menus( array(
+    'primary' => __( 'Primary Menu', 'limiwu' )
+  ) );
 }
-add_action( 'after_setup_theme', 'paipk1_setup' );
+add_action('after_setup_theme','paipk1_setup');
 
 /**
 * 函数名称：paipk1_post_thumbnail_url

@@ -40,5 +40,3 @@
 <![endif]-->
 </head>
 <?php flush(); ?>
-<?php echo _e('text') ?>
-<?php _e('Filed under:'); ?>
