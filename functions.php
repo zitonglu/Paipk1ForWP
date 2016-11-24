@@ -1,5 +1,35 @@
 <?php
-add_theme_support('post-thumbnails');
+/**
+ * paipk1 setup.
+ *
+ * Sets up theme defaults and registers the various WordPress features that
+ * i-max supports.
+ *
+ * @uses load_theme_textdomain() For translation/localization support.  
+ * @uses add_theme_support() To add support for post thumbnails.
+ *
+ * @since paipk1 1.0
+ *
+ * @return void
+ */
+function paipk1_setup() {
+  /*
+   * Makes paipk1 available for translation.
+   *
+   * Translations can be added to the /languages/ directory.
+   * If you're building a theme based on paipk1, use a find and
+   * replace to change 'paipk1' to the name of your theme in all
+   * template files.
+   */
+  load_theme_textdomain( 'paipk1', get_template_directory() . '/languages' );
+  /*
+   * This theme uses a custom image size for featured images, displayed on
+   * "standard" posts and pages.
+   */
+  add_theme_support('post-thumbnails');
+}
+add_action( 'after_setup_theme', 'paipk1_setup' );
+
 /**
 * 函数名称：paipk1_post_thumbnail_url
 * 函数作用：输出特殊图片中的图片链接地址
