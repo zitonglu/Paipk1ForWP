@@ -60,14 +60,15 @@ function paipk1_post_thumbnail_url(){
 	echo "$imgsrc";
 }
 /**
- * record_visitors.
+ * post_views.
  *
- * Record the number of articles
+ * Record browsing times
  *
+ * @uses record_visitors() For record visitors number.  
  *
  * @since paipk1 1.0
  *
- * @return void
+ * @return The number of times the article is viewed
  */
 function record_visitors(){
     if (is_singular()){
@@ -80,10 +81,7 @@ function record_visitors(){
     }
 }
 add_action('wp_head', 'record_visitors');
-/**
-* 函数名称：post_views
-* 函数作用：取得文章的阅读次数
- */
+
 function post_views($before = '', $after = '', $echo = 1){
   global $post;
   $post_ID = $post->ID;
