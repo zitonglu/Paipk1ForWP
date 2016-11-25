@@ -26,7 +26,7 @@
 
 <div class="text-center more-btn">
 <?php $prev_post = get_adjacent_post('','',ture);$next_post = get_adjacent_post('','',false);if(get_previous_post()): ?>
-  <a class="btn btn-yellowgreen" href="<?php echo get_permalink($prev_post); ?>" role="button"><span class="glyphicon glyphicon-chevron-left"></span>&nbsp;<?php _e('last','paipk1')?></a>
+  <a class="btn btn-yellowgreen" href="<?php echo get_permalink($prev_post); ?>" role="button"><span class="glyphicon glyphicon-chevron-left"></span>&nbsp;<?php _e('next','paipk'); ?></a>
 <?php endif ?>
 
   <a class="btn btn-blue" href="#" role="button" data-toggle="modal" data-target="#myshang"><span class="glyphicon glyphicon-thumbs-up"></span>&nbsp;打赏</a>

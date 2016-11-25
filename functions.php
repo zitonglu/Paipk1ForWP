@@ -16,12 +16,8 @@ function paipk1_setup() {
   /*
    * Makes paipk1 available for translation.
    *
-   * Translations can be added to the /languages/ directory.
-   * If you're building a theme based on paipk1, use a find and
-   * replace to change 'paipk1' to the name of your theme in all
-   * template files.
    */
-  load_theme_textdomain( 'paipk1', get_template_directory() . '/languages' );
+  load_theme_textdomain( 'paipk1' );
   /*
    * This theme uses a custom image size for featured images, displayed on
    * "standard" posts and pages.
@@ -33,7 +29,7 @@ function paipk1_setup() {
   add_theme_support('post-formats', array('aside', 'image', 'video', 'audio', 'quote', 'link', 'gallery',) );
   // This theme uses wp_nav_menu() in one location.
   register_nav_menus( array(
-    'primary' => __( 'Primary Menu', 'paipk1' )
+    'primary' => __( 'Primary Menu', 'paipk' )
   ) );
 }
 add_action('after_setup_theme','paipk1_setup');
