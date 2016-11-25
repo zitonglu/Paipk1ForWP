@@ -1,31 +1,26 @@
 <?php
 /**
+ * this is content style,for single.php
+ *
  * @package WordPress
  * @subpackage paipk1
  * @since paipk1 1.0
  */
 ?>
-<li class="media" id="post-<?php the_ID(); ?>">
-	<h4><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h4>
-	<div class="media-left">
-		<div class="media-box">
-			<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><img src="<?php paipk1_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>"></a>
-			<div class="tim"><a href="<?php the_permalink(); ?>"><?php the_time('M') ?><br>><?php the_time('d') ?></a>
-			</div>
-			<div class="cat">
-				<?php the_category(',') ?>
-			</div>
-		</div>
-	</div>
-	<div class="media-body">
-		<h6>
-		<i class="glyphicon glyphicon-time"></i>&nbsp;<?php the_time('Y-m-d') ?>&nbsp;
-		<?php if(has_tag()): ?><i class="glyphicon glyphicon-tags"></i>&nbsp;
-			<?php the_tags('',',') ?>
-		<?php endif ?>
-		<i class="glyphicon glyphicon-eye-open"></i>&nbsp;<a href="#"><?php post_views(); ?></a></a>
-		</h6>
-		<?php the_excerpt() ?>
-		<p class="clearfix"></p>
-	</div>
-</li>
+<section class="section">
+	<h2 class="title"><?php the_title(); ?></h2>
+	<?php include (TEMPLATEPATH . '/template-parts/baidushare.php'); ?>
+	<div class="tab">
+		<i class="glyphicon glyphicon-time"></i>&nbsp;<?php the_time('Y-m-d h:i'); ?>
+		<span class="hidden-xs">&nbsp;
+			<i class="glyphicon glyphicon-folder-open"></i>&nbsp;<?php the_category(',') ?>&nbsp;
+			<i class="glyphicon glyphicon-tags"></i>&nbsp;<?php the_tags(""); ?>
+			&nbsp;
+			<i class="glyphicon glyphicon-eye-open"></i>&nbsp;<?php record_visitors(); ?>&nbsp;
+			<i class="glyphicon glyphicon-comment"></i>&nbsp;
+			<a href="#SOHUCS" title="发表评论">发表评论</a>
+		</span>
+	</div><!-- Single-nav end -->
+		<?php the_content(); ?>
+</section>
+	<?php comments_template( '', true ); ?>

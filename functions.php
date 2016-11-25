@@ -60,8 +60,14 @@ function paipk1_post_thumbnail_url(){
 	echo "$imgsrc";
 }
 /**
-* 函数名称：record_visitors
-* 函数作用：post_views的预定义函数
+ * record_visitors.
+ *
+ * Record the number of articles
+ *
+ *
+ * @since paipk1 1.0
+ *
+ * @return void
  */
 function record_visitors(){
     if (is_singular()){

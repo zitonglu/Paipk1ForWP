@@ -22,7 +22,7 @@ get_header(); ?>
 <div class="article">
 	<ul class="media-list">
 		<?php while(have_posts()) : the_post(); ?>
-		<?php get_template_part('template-parts/content','index'); ?>
+		<?php get_template_part('template-parts/list',get_post_format()); ?>
 		<?php endwhile; ?>
 	</ul>
 </div>
