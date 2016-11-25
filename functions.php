@@ -31,8 +31,9 @@ function paipk1_setup() {
    * This theme supports all available post formats by default.
    */
   add_theme_support('post-formats', array('aside', 'image', 'video', 'audio', 'quote', 'link', 'gallery',) );
+  // This theme uses wp_nav_menu() in one location.
   register_nav_menus( array(
-    'primary' => __( 'Primary Menu', 'limiwu' )
+    'primary' => __( 'Primary Menu', 'paipk1' )
   ) );
 }
 add_action('after_setup_theme','paipk1_setup');

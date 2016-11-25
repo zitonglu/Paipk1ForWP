@@ -21,7 +21,19 @@
 		</div>
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav" id="divNavBar">
-				<li><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></li>
+<?php 
+	if ( has_nav_menu( 'primary' )) {
+	wp_nav_menu( array(
+	'container' 		=> 'div',
+	'container_class' 	=> 'collapse navbar-collapse',
+	'container_id' 		=> 'bs-example-navbar-collapse-1',
+	'menu_class'		=> 'nav navbar-nav',
+	'before'   			=> '',
+	'after'     		=> '',
+	'depth'          	=> 1,
+	) );
+	}
+?>
 			</ul>
 			<ul class="nav navbar-nav navbar-right hidden-xs">
 				<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="glyphicon glyphicon-search"></i></a>
