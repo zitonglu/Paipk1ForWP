@@ -12,10 +12,10 @@
 	</p>
 </footer>
 
-<script src='http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js'></script>
-<script src='http://apps.bdimg.com/libs/bootstrap/3.3.0/js/bootstrap.min.js'></script>
-<script src='<?php bloginfo('template_url'); ?>/js/custom.js'></script>
-<script src='<?php bloginfo('template_url'); ?>/js/theia-sticky-sidebar.js'></script>
+<script type='text/javascript' src='http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js'></script>
+<script type='text/javascript' src='http://apps.bdimg.com/libs/bootstrap/3.3.0/js/bootstrap.min.js'></script>
+<script type='text/javascript' src='<?php bloginfo('template_url'); ?>/js/custom.js'></script>
+<script type='text/javascript' src='<?php bloginfo('template_url'); ?>/js/theia-sticky-sidebar.js'></script>
 <?php wp_footer(); ?>
 </body>
 </html>

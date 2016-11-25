@@ -17,7 +17,7 @@ function paipk1_setup() {
    * Makes paipk1 available for translation.
    *
    */
-  load_theme_textdomain( 'paipk1' );
+  load_theme_textdomain( 'paipk1', get_template_directory() . '/languages' );
   /*
    * This theme uses a custom image size for featured images, displayed on
    * "standard" posts and pages.
@@ -33,6 +33,8 @@ function paipk1_setup() {
   ) );
 }
 add_action('after_setup_theme','paipk1_setup');
+//clear wordpress version number
+remove_action('wp_head', 'wp_generator');
 
 /**
 * 函数名称：paipk1_post_thumbnail_url
