@@ -25,12 +25,16 @@
 </section>
 
 <div class="text-center more-btn">
-  <a class="btn btn-yellowgreen" href="{$article.Prev.Url}" role="button" title="{$article.Prev.Title}"><span class="glyphicon glyphicon-chevron-left"></span>&nbsp;上一篇</a>
+<?php $prev_post = get_adjacent_post('','',ture);$next_post = get_adjacent_post('','',false);if(get_previous_post()): ?>
+  <a class="btn btn-yellowgreen" href="<?php echo get_permalink($prev_post); ?>" role="button"><span class="glyphicon glyphicon-chevron-left"></span>&nbsp;<?php _e('last','paipk1')?></a>
+<?php endif ?>
 
   <a class="btn btn-blue" href="#" role="button" data-toggle="modal" data-target="#myshang"><span class="glyphicon glyphicon-thumbs-up"></span>&nbsp;打赏</a>
 	<?php include (TEMPLATEPATH . '/template-parts/reward.php'); ?>
 
-  <a class="btn btn-orange" href="{$article.Next.Url}" role="button" title="{$article.Next.Title}">下一篇&nbsp;<span class="glyphicon glyphicon-chevron-right"></span></a>
+<?php if(get_next_post()): ?>
+  <a class="btn btn-orange" href="<?php echo get_permalink($next_post); ?>" role="button"><?php _e('Next','paipk1')?>&nbsp;<span class="glyphicon glyphicon-chevron-right"></span></a>
+<?php endif ?>
 </div><!-- Prev and Next button end -->
 
 <?php comments_template( '', true ); ?>
