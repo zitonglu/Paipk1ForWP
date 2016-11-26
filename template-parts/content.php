@@ -18,7 +18,7 @@
 			&nbsp;
 			<i class="glyphicon glyphicon-eye-open"></i>&nbsp;<?php post_views(); ?>&nbsp;
 			<i class="glyphicon glyphicon-comment"></i>&nbsp;
-			<a href="#SOHUCS" title="<?php _e('Comment','paipk1'); ?>"><?php _e('Comment','paipk1'); ?></a>
+			<a href="#SOHUCS" title="<?php _e('Comment','paipk1'); ?>"><?php echo comments_users($post->ID); ?></a>
 		</span>
 	</div><!-- Single-nav end -->
 	<?php the_content(); ?>

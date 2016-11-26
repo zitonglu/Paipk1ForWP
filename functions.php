@@ -37,27 +37,6 @@ add_action('after_setup_theme','paipk1_setup');
 remove_action('wp_head', 'wp_generator');
 
 /**
-* 函数名称：paipk1_post_thumbnail_url
-* 函数作用：输出特殊图片中的图片链接地址
- */
-function paipk1_post_thumbnail_url(){
-	global $post, $posts;
-	if (has_post_thumbnail()) {
-		$html = get_the_post_thumbnail();
-		preg_match_all("/<img.*src\s*=\s*[\"|\']?\s*([^>\"\'\s]*)/i", $html, $matches);
-		$imgsrc=$matches[1][0];
-	}else{
-		$content = $post->post_content;
-        preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i',$post->post_content,$matches);
-        $imgsrc=$matches[1][0];
-        if($imgsrc==""){ 
-        // 如果无图片则显示none，当然也可以自定义个URL地址
-            $imgsrc="none";
-        }
-	}
-	echo "$imgsrc";
-}
-/**
  * post_views.
  *
  * Record browsing times
@@ -87,6 +66,59 @@ function post_views($before = '', $after = '', $echo = 1){
   if ($echo) echo $before, number_format($views), $after;
   else return $views;
 }
+
+/**
+ * comments users.
+ *
+ * Statistical review.copy form http://zww.me/archives/25613
+ *
+ *
+ * @since paipk1 1.0
+ *
+ * @return Comment number
+ */
+function comments_users($postid=0,$which=0) {
+  $comments = get_comments('status=approve&type=comment&post_id='.$postid);
+  if ($comments) {
+    $i=0; $j=0; $commentusers=array();
+    foreach ($comments as $comment) {
+      ++$i;
+      if ($i==1) { $commentusers[] = $comment->comment_author_email; ++$j; }
+      if ( !in_array($comment->comment_author_email, $commentusers) ) {
+        $commentusers[] = $comment->comment_author_email;
+        ++$j;
+      }
+    }
+    $output = array($j,$i);
+    $which = ($which == 0) ? 0 : 1;
+    return $output[$which];
+  }
+  return 0; 
+}
+
+
+/**
+* 函数名称：paipk1_post_thumbnail_url
+* 函数作用：输出特殊图片中的图片链接地址
+ */
+function paipk1_post_thumbnail_url(){
+	global $post, $posts;
+	if (has_post_thumbnail()) {
+		$html = get_the_post_thumbnail();
+		preg_match_all("/<img.*src\s*=\s*[\"|\']?\s*([^>\"\'\s]*)/i", $html, $matches);
+		$imgsrc=$matches[1][0];
+	}else{
+		$content = $post->post_content;
+        preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i',$post->post_content,$matches);
+        $imgsrc=$matches[1][0];
+        if($imgsrc==""){ 
+        // 如果无图片则显示none，当然也可以自定义个URL地址
+            $imgsrc="none";
+        }
+	}
+	echo "$imgsrc";
+}
+
 /** widgets */
 if( function_exists('register_sidebar') ) {
   register_sidebar(array(
