@@ -37,4 +37,22 @@
 <?php endif ?>
 </div><!-- Prev and Next button end -->
 
+<div class="author-box">
+  <div class="col-sm-8">
+    <a href="<?php the_author_url(); ?>" title="<?php _e('Author','paipk1');?>:<?php the_author_nickname(); ?>" target="_blank">
+    	<?php echo get_avatar(get_the_author_meta('ID'),50); ?>
+    </a>
+    <h4>
+    <?php _e('Author','paipk1');?>:<a href="<?php the_author_url(); ?>" title="<?php _e('Author','paipk1');?>:<?php the_author_nickname(); ?>" target="_blank"><?php the_author_nickname(); ?></a>
+    </h4>
+    <p><?php the_author_description(); ?></p>
+  </div>
+
+  <div class="col-sm-4 singlebottomAD">
+    <!-- AD -->
+  </div>
+
+  <div class="clearfix"></div>
+</div><!-- author and AD button end -->
+
 <?php comments_template( '', true ); ?>

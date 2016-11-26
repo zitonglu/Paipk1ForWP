@@ -93,7 +93,7 @@ function comments_users($postid=0,$which=0) {
     $which = ($which == 0) ? 0 : 1;
     return $output[$which];
   }
-  return 0; 
+  return __('Comment','paipk1'); 
 }
 
 
