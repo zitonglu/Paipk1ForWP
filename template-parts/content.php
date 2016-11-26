@@ -55,4 +55,62 @@
   <div class="clearfix"></div>
 </div><!-- author and AD button end -->
 
+<div class="more-list">
+
+<ul class="nav nav-tabs" role="tablist">
+	<li role="presentation" class="active"><a href="#aboutList" role="tab" data-toggle="tab" title="<?php _e('RelateArticles','paipk1'); ?>"><i class="glyphicon glyphicon-list-alt"></i>&nbsp;<?php _e('RelateArticles','paipk1'); ?></a></li>
+	<li role="presentation"><a href="#hotList" role="tab" data-toggle="tab" title="<?php _e('HotArticles','paipk1'); ?>"><i class="glyphicon glyphicon-fire"></i>&nbsp;<?php _e('HotArticles','paipk1'); ?></a></li>
+</ul>
+
+<div class="tab-content">
+  <div role="tabpanel" class="tab-pane active" id="aboutList">
+<?php
+global $post;
+$post_tags = wp_get_post_tags($post->ID);
+if ($post_tags) {
+  foreach ($post_tags as $tag) {
+  	$tag_list[] .= $tag->term_id;
+  }
+   $post_tag = $tag_list[ mt_rand(0, count($tag_list) - 1) ];
+   $args = array(
+        'tag__in' => array($post_tag),
+        'category__not_in' => array(NULL),
+        'post__not_in' => array($post->ID),
+        'showposts' => 4,
+        'caller_get_posts' => 1
+    );
+	query_posts($args);
+	if (have_posts()) {
+		while (have_posts()) {
+			the_post(); update_post_caches($posts); ?>
+<div class="col-sm-3 col-xs-6 more-text-box">
+	<a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
+	<?php if ( has_post_thumbnail() ) { ?>
+	<?php the_post_thumbnail(); ?>
+	<?php } else {?>
+	<img src="<?php bloginfo('template_url'); ?>/images/nopic.png" title="<?php the_title_attribute(); ?>" />
+	<?php } ?>
+	</a>
+	<p class="BMT-title">
+    	<a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_time('Y-m-d'); ?></a><br><br><?php _e('has been viewed ','paipk1').post_views(); ?>
+  	</p>
+	<p class="more-text-title">
+		<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+	</p>
+</div>
+			<?php }
+		}
+	wp_reset_query();
+}
+else {
+  echo '<p style="text-indent:2em;">'.__('No related articles','paipk1').'</p>';
+}
+?>
+  <div class="clearfix"></div>
+  </div><!-- RelateArticles -->
+  
+</div>
+
+</div>
+
 <?php comments_template( '', true ); ?>
