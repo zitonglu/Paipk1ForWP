@@ -14,7 +14,7 @@ get_header(); ?>
 <div class="container">
 	<aside class="col-md-2 col-sm-3 hidden-xs sidebar">
 		<div class="theiaStickySidebar">
-		<?php get_sidebar(); ?>
+		<?php get_sidebar('left'); ?>
 		</div>
 	</aside>
 	<div class="col-md-7 col-sm-9 list-body">

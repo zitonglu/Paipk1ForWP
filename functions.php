@@ -26,10 +26,10 @@ function paipk1_setup() {
   /*
    * This theme supports all available post formats by default.
    */
-  add_theme_support('post-formats', array('aside', 'image', 'video', 'audio', 'quote', 'link', 'gallery',) );
+  add_theme_support('post-formats', array('aside', 'image', 'video', 'audio', 'quote', 'link', 'gallery') );
   // This theme uses wp_nav_menu() in one location.
   register_nav_menus( array(
-    'primary' => __( 'Primary Menu', 'paipk' )
+    'primary' => __('Primary Menu', 'paipk1')
   ) );
 }
 add_action('after_setup_theme','paipk1_setup');
@@ -119,35 +119,21 @@ function paipk1_post_thumbnail_url(){
 	echo "$imgsrc";
 }
 
-/** widgets */
+/** widgets **/
 if( function_exists('register_sidebar') ) {
   register_sidebar(array(
-    'name' => 'First_sidebar',
-    'before_widget' => '',
-    'after_widget' => '',
-    'before_title' => '<h5>',
-    'after_title' => '</h5>'
+    'name' => __('RightSidebar','paipk1'),
+    'before_widget' => '<section class="widget" id="%2$s">',
+    'after_widget' => '</section>',
+    'before_title' => '<div class="modulename"><h5 class="glyphicon">',
+    'after_title' => '</h5></div>'
   ));
   register_sidebar(array(
-    'name' => 'Second_sidebar',
-    'before_widget' => '',
-    'after_widget' => '',
-    'before_title' => '<h5>',
-    'after_title' => '</h5>'
-  ));
-  register_sidebar(array(
-    'name' => 'Third_sidebar',
-    'before_widget' => '',
-    'after_widget' => '',
-    'before_title' => '<h5>',
-    'after_title' => '</h5>'
-  ));
-  register_sidebar(array(
-    'name' => 'Fourth_sidebar',
-    'before_widget' => '',
-    'after_widget' => '',
-    'before_title' => '<h5>',
-    'after_title' => '</h5>'
+    'name' => __('LeftSidebar','paipk1'),
+    'before_widget' => '<section class="widget" id="%2$s">',
+    'after_widget' => '</section>',
+    'before_title' => '<div class="modulename"><h5 class="glyphicon">',
+    'after_title' => '</h5></div>'
   ));
 }
 

@@ -202,7 +202,7 @@ fieldset[disabled] .navbar-mycolor .btn-link:focus {
 }
 .widget h5.glyphicon-divTags::before{content:'\e042'}
 .widget h5.glyphicon-divArchives::before{content:'\e012'}
-.widget h5.glyphicon-divPrevious::before{content:'\270f'}
+#widget_recent_entries h5.glyphicon::before{content:'\270f'}
 .widget h5.glyphicon-divLinkage::before{content:'\e144'}
 .widget h5.glyphicon-divComments::before{content:'\e111'}
 .widget h5.glyphicon-divAuthors::before{content:'\e008'}

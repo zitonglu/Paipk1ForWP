@@ -5,4 +5,4 @@
  * @since paipk1 1.0
  */
 
-dynamic_sidebar('RightSidebar'); ?>
+dynamic_sidebar('LeftSidebar'); ?>

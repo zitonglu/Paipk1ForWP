@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: paipk1 zh_CN\n"
-"POT-Creation-Date: 2016-11-27 11:33+0800\n"
-"PO-Revision-Date: 2016-11-27 11:34+0800\n"
+"POT-Creation-Date: 2016-11-27 22:20+0800\n"
+"PO-Revision-Date: 2016-11-27 22:20+0800\n"
 "Last-Translator: \n"
 "Language-Team: zitonglu\n"
 "Language: zh_CN\n"
@@ -16,46 +16,58 @@ msgstr ""
 "X-Poedit-KeywordsList: _e;__;_n:1,2;_x:1,2c;_ex:1,2c\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: comments.php:21 comments.php:51 functions.php:96
-#: template-parts/content.php:21
+#: comments.php:21 comments.php:27 comments.php:51 comments.php:80
+#: functions.php:96 template-parts/content.php:21
 msgid "Comment"
 msgstr "评论"
+
+#: comments.php:27
+msgid "Sign in"
+msgstr "登录"
 
 #: comments.php:33
 msgid "Observer"
 msgstr "评论者"
 
 #: comments.php:35
-msgid "Your Name"
+msgid "Your name"
 msgstr "您的称呼"
 
 #: comments.php:45
 msgid "Website"
 msgstr "网址"
 
-#: comments.php:62
+#: comments.php:67
 msgid "Submit Comments"
 msgstr "提交评论"
 
-#: comments.php:93
-msgid "Comment navigation"
-msgstr ""
+#: comments.php:69
+msgid "Sign out"
+msgstr "登出"
 
-#: comments.php:94
-msgid "&larr; Older Comments"
-msgstr ""
+#: comments.php:80
+msgid "List"
+msgstr "列表"
 
-#: comments.php:95
-msgid "Newer Comments &rarr;"
-msgstr ""
+#: comments.php:89
+msgid "&larr; Prev"
+msgstr "《 上一页"
 
-#: comments.php:100
-msgid "Comments are closed."
-msgstr ""
+#: comments.php:90
+msgid "Next &rarr;"
+msgstr "下一页 》"
 
 #: functions.php:32
 msgid "Primary Menu"
 msgstr "主菜单"
+
+#: functions.php:125
+msgid "RightSidebar"
+msgstr "右侧栏"
+
+#: functions.php:132
+msgid "LeftSidebar"
+msgstr "左侧栏"
 
 #: template-parts/content.php:29
 msgid "Previous"
@@ -88,6 +100,27 @@ msgstr "文章被浏览 "
 #: template-parts/content.php:106
 msgid "No related articles"
 msgstr "暂无相关文章"
+
+#~ msgid "Right sidebar"
+#~ msgstr "右侧栏"
+
+#~ msgid "Left sidebar"
+#~ msgstr "左侧栏"
+
+#~ msgid "Default"
+#~ msgstr "默认"
+
+#~ msgid "Right"
+#~ msgstr "右"
+
+#~ msgid "sidebar"
+#~ msgstr "侧栏"
+
+#~ msgid "Left"
+#~ msgstr "左"
+
+#~ msgid "Your Name"
+#~ msgstr "您的称呼"
 
 #~ msgid "prev post"
 #~ msgstr "上一篇"
