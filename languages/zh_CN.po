@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: paipk1 zh_CN\n"
-"POT-Creation-Date: 2016-11-27 10:11+0800\n"
-"PO-Revision-Date: 2016-11-27 10:12+0800\n"
+"POT-Creation-Date: 2016-11-27 11:33+0800\n"
+"PO-Revision-Date: 2016-11-27 11:34+0800\n"
 "Last-Translator: \n"
 "Language-Team: zitonglu\n"
 "Language: zh_CN\n"
@@ -16,13 +16,46 @@ msgstr ""
 "X-Poedit-KeywordsList: _e;__;_n:1,2;_x:1,2c;_ex:1,2c\n"
 "X-Poedit-SearchPath-0: .\n"
 
+#: comments.php:21 comments.php:51 functions.php:96
+#: template-parts/content.php:21
+msgid "Comment"
+msgstr "评论"
+
+#: comments.php:33
+msgid "Observer"
+msgstr "评论者"
+
+#: comments.php:35
+msgid "Your Name"
+msgstr "您的称呼"
+
+#: comments.php:45
+msgid "Website"
+msgstr "网址"
+
+#: comments.php:62
+msgid "Submit Comments"
+msgstr "提交评论"
+
+#: comments.php:93
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:94
+msgid "&larr; Older Comments"
+msgstr ""
+
+#: comments.php:95
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: comments.php:100
+msgid "Comments are closed."
+msgstr ""
+
 #: functions.php:32
 msgid "Primary Menu"
 msgstr "主菜单"
-
-#: functions.php:96 template-parts/content.php:21
-msgid "Comment"
-msgstr "评论"
 
 #: template-parts/content.php:29
 msgid "Previous"
