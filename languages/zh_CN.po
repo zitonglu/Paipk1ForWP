@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: paipk1 zh_CN\n"
-"POT-Creation-Date: 2016-11-26 13:29+0800\n"
-"PO-Revision-Date: 2016-11-26 13:30+0800\n"
+"POT-Creation-Date: 2016-11-27 10:11+0800\n"
+"PO-Revision-Date: 2016-11-27 10:12+0800\n"
 "Last-Translator: \n"
 "Language-Team: zitonglu\n"
 "Language: zh_CN\n"
@@ -27,6 +27,10 @@ msgstr "评论"
 #: template-parts/content.php:29
 msgid "Previous"
 msgstr "上一篇"
+
+#: template-parts/content.php:32
+msgid "Gift"
+msgstr "打赏"
 
 #: template-parts/content.php:36
 msgid "Next"

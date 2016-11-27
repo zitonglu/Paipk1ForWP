@@ -29,7 +29,7 @@
   <a class="btn btn-yellowgreen" href="<?php echo get_permalink($prev_post); ?>" role="button"><span class="glyphicon glyphicon-chevron-left"></span>&nbsp;<?php _e('Previous','paipk1'); ?></a>
 <?php endif ?>
 
-  <a class="btn btn-blue" href="#" role="button" data-toggle="modal" data-target="#myshang"><span class="glyphicon glyphicon-thumbs-up"></span>&nbsp;打赏</a>
+  <a class="btn btn-blue" href="#" role="button" data-toggle="modal" data-target="#myshang"><span class="glyphicon glyphicon-thumbs-up"></span>&nbsp;<?php _e('Gift','paipk1'); ?></a>
 	<?php include (TEMPLATEPATH . '/template-parts/reward.php'); ?>
 
 <?php if(get_next_post()): ?>
@@ -108,9 +108,31 @@ else {
 ?>
   <div class="clearfix"></div>
   </div><!-- RelateArticles -->
-  
+
+<div role="tabpanel" class="tab-pane" id="hotList">
+	<ul class="list-inline hotListul">
+<?php
+$post_num = 10; // Set number of calls
+$args = array(
+	'post_password' => '',
+	'post_status' => 'publish', // Open the article only
+	'post__not_in' => array($post->ID),//Exclude current article
+	'caller_get_posts' => 1, // Exclude articles
+	'orderby' => 'comment_count', // Sort by number of comments
+	'posts_per_page' => $post_num
+	);
+$query_posts = new WP_Query();
+$query_posts->query($args);
+while( $query_posts->have_posts() ) { $query_posts->the_post(); ?>
+		<li class="col-sm-6 col-xs-12">
+			<i class="glyphicon glyphicon-list-alt"></i>&nbsp;&nbsp;<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
+		</li>
+<?php } wp_reset_query();?>
+	</ul>
+	<div class="clearfix"></div>
+</div><!-- hotList -->
 </div>
 
-</div>
+</div><!-- morelist end -->
 
 <?php comments_template( '', true ); ?>
