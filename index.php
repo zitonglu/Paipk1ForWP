@@ -8,7 +8,7 @@
  * @since paipk1 1.0
  */
 get_header(); ?>
-<body id="top" <?php body_class('index'); ?>>
+<body <?php body_class('index'); ?>>
 <?php include (TEMPLATEPATH . '/template-parts/nav.php'); ?>
 
 <div class="container">

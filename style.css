@@ -1337,3 +1337,4 @@ div.prism-show-language > div.prism-show-language-label[data-language]{
 .btn-blue.active{
   background-image: none;
 }
+.hiddened{display:none}

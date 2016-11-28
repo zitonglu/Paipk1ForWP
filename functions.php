@@ -119,7 +119,13 @@ function paipk1_post_thumbnail_url(){
 	echo "$imgsrc";
 }
 
-/** widgets **/
+/**
+ * weight
+ *
+ * @since paipk1 1.0
+ *
+ * @return void
+ */
 if( function_exists('register_sidebar') ) {
   register_sidebar(array(
     'name' => __('RightSidebar','paipk1'),
