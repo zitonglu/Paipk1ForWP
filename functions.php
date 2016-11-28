@@ -136,5 +136,40 @@ if( function_exists('register_sidebar') ) {
     'after_title' => '</h5></div>'
   ));
 }
+if ( ! function_exists( 'paipk1_paging_nav' ) ) :
+/**
+ * Display navigation to next/previous set of posts when applicable.
+ *
+ * @since paipk1 1.0
+ *
+ * @return void
+ */
+function paipk1_paging_nav() {
+  
+  global $wp_query;
+
+  // Don't print empty markup if there's only one page.
+  if ( $wp_query->max_num_pages < 2 )
+    return;
+  ?>
+    <?php
+    $big = 999999999; // need an unlikely integer
+    $args = array(
+      'base' => str_replace( $big, '%#%', get_pagenum_link( $big ) ),
+      'format' => '?paged=%#%',
+      'current' => max( 1, get_query_var('paged') ),
+      'total' => $wp_query->max_num_pages,
+      'type' => 'list',
+      'prev_text' => '&laquo; ' . __( 'Previous', 'paipk1' ),
+      'next_text' => __( 'Next', 'paipk1' ) . ' &raquo;',
+      'add_args' => false         
+    );
+  ?>            
+  <nav class="text-center" id="page">
+        <?php echo paginate_links( $args ); ?>
+  </nav><!-- .navigation -->
+  <?php
+}
+endif;
 
 ?>

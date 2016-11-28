@@ -6,4 +6,5 @@ $(document).ready(function() {
 			return false;
 		}
 	});
+	$("nav#page>ul.page-numbers").removeClass("page-numbers").addClass("pagination");
 });

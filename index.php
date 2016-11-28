@@ -27,6 +27,8 @@ get_header(); ?>
 	</ul>
 </div>
 		<?php endif; ?>
+		
+		<?php paipk1_paging_nav(); ?>
 	</div>
 	<aside class="col-md-3 hidden-xs hidden-sm sidebar">
 		<div class="theiaStickySidebar">
