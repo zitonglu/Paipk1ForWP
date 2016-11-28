@@ -15,7 +15,6 @@ $(document).ready(function() {
 });
 // 返回顶部时影藏
 $(function(){
-	var speed = 500;
     $(window).scroll(function() {
         var scrollY = $(document).scrollTop();
         if (scrollY <= 0){
