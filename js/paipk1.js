@@ -11,7 +11,6 @@ $(document).ready(function() {
 	});
 	// 更换翻页class
 	$("nav#page>ul.page-numbers").removeClass("page-numbers").addClass("pagination");
-	
 });
 // 返回顶部时影藏
 $(function(){
