@@ -12,7 +12,7 @@
 <?php if (has_post_thumbnail()): ?>
 	<div class="media-left">
 		<div class="media-box">
-			<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><img src="<?php paipk1_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>"></a>
+			<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><img src="<?php echo paipk1_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>"></a>
 			<div class="tim"><a href="<?php the_permalink(); ?>"><?php the_time('M') ?><br><?php the_time('d') ?></a>
 			</div>
 			<div class="cat">

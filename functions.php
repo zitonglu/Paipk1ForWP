@@ -96,27 +96,22 @@ function comments_users($postid=0,$which=0) {
   return __('Comment','paipk1'); 
 }
 
-
 /**
-* 函数名称：paipk1_post_thumbnail_url
-* 函数作用：输出特殊图片中的图片链接地址
+ * Post thumbnail Url
+ *
+ * @since paipk1 1.0
+ *
+ * @return Post thumbnail Url
  */
 function paipk1_post_thumbnail_url(){
 	global $post, $posts;
+  $imgsrc = "";
 	if (has_post_thumbnail()) {
 		$html = get_the_post_thumbnail();
 		preg_match_all("/<img.*src\s*=\s*[\"|\']?\s*([^>\"\'\s]*)/i", $html, $matches);
 		$imgsrc=$matches[1][0];
-	}else{
-		$content = $post->post_content;
-        preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i',$post->post_content,$matches);
-        $imgsrc=$matches[1][0];
-        if($imgsrc==""){ 
-        // 如果无图片则显示none，当然也可以自定义个URL地址
-            $imgsrc="none";
-        }
 	}
-	echo "$imgsrc";
+	return $imgsrc;
 }
 
 /**
