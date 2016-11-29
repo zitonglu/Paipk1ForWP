@@ -16,7 +16,7 @@
 		<i class="glyphicon glyphicon-time"></i>&nbsp;<?php the_time('Y-m-d h:i'); ?>
 		<span class="hidden-xs">&nbsp;
 			<i class="glyphicon glyphicon-folder-open"></i>&nbsp;<?php the_category(',') ?>&nbsp;
-			<i class="glyphicon glyphicon-tags"></i>&nbsp;<?php the_tags(""); ?>
+			<i class="glyphicon glyphicon-tags"></i>&nbsp;<?php the_tags(''); ?>
 			&nbsp;
 			<i class="glyphicon glyphicon-eye-open"></i>&nbsp;<?php post_views(); ?>&nbsp;
 			<i class="glyphicon glyphicon-comment"></i>&nbsp;

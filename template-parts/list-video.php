@@ -16,7 +16,7 @@ if($embed){
 		<h6>
 		<i class="glyphicon glyphicon-time"></i>&nbsp;<?php the_time('Y-m-d') ?>&nbsp;
 		<?php if(has_tag()): ?><i class="glyphicon glyphicon-tags"></i>&nbsp;
-			<?php the_tags('',',') ?>
+			<?php the_tags('') ?>
 		<?php endif ?>
 		<i class="glyphicon glyphicon-eye-open"></i>&nbsp;<a href="<?php the_permalink(); ?>"><?php post_views(); ?></a>
 		</h6>

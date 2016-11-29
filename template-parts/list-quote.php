@@ -16,7 +16,7 @@
 		<p>
 		<i class="glyphicon glyphicon-time"></i>&nbsp;<?php the_time('Y-m-d') ?>&nbsp;
 		<?php if(has_tag()): ?><i class="glyphicon glyphicon-tags"></i>&nbsp;
-			<?php the_tags('',',') ?>
+			<?php the_tags('') ?>
 		<?php endif ?>
 		<i class="glyphicon glyphicon-comment"></i>&nbsp;<a href="<?php the_permalink(); ?>#SOHUCS" title="<?php the_title(); ?>"><?php _e('Comment','paipk1') ?></a>
 		</p>
