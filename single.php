@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<body <?php body_class('index'); ?>>
+<body <?php body_class(); ?>>
 <?php include (TEMPLATEPATH . '/template-parts/nav.php'); ?>
 
 <?php if (have_posts()): ?>
