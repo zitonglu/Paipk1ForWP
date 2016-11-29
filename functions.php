@@ -174,5 +174,19 @@ function paipk1_paging_nav() {
   <?php
 }
 endif;
-
+/**
+ * get the pic form this content
+ *
+ * @since paipk1 1.0
+ *
+ * @return <IMG>
+ */
+function paipk1_get_post_images($post_content){
+  preg_match_all('|<img.*?src=[\'"](.*?)[\'"].*?>|i', do_shortcode($post_content), $matches);
+  if($matches){
+  return $matches;//自行var_dump($matches)就可以看到效果了。
+    }else{
+  return false;
+  }
+}
 ?>
