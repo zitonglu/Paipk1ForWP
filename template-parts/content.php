@@ -7,6 +7,9 @@
  * @since paipk1 1.0
  */
 ?>
+<div class="container">
+<article class="col-md-9 article">
+
 <section class="section">
 	<h2 class="title"><?php the_title(); ?></h2>
 	<?php include (TEMPLATEPATH . '/template-parts/baidushare.php'); ?>
@@ -136,3 +139,13 @@ while( $query_posts->have_posts() ) { $query_posts->the_post(); ?>
 </div><!-- morelist end -->
 
 <?php comments_template( '', true ); ?>
+
+</article>
+
+<div class="col-md-3 single-box hidden-xs hidden-sm sidebar">
+	<aside class="single-right theiaStickySidebar">
+		<?php get_sidebar(); ?>
+	</aside>
+</div><!-- sidebar -->
+
+</div>

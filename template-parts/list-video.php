@@ -12,7 +12,7 @@ if($embed){
 <li class="media videolist" id="post-<?php the_ID(); ?>">
 	<h4><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h4>
 	<div class="media-body">
-		<?php the_excerpt() ?>
+		<p><?php the_excerpt() ?></p>
 		<h6>
 		<i class="glyphicon glyphicon-time"></i>&nbsp;<?php the_time('Y-m-d') ?>&nbsp;
 		<?php if(has_tag()): ?><i class="glyphicon glyphicon-tags"></i>&nbsp;
