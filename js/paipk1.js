@@ -26,7 +26,7 @@ $(function(){
 });
 // 返回顶部
 $("#returnTop").click(function () {
-    var speed = 500;
+    var speed = 300;
     $('body,html').animate({scrollTop:0}, speed);
     return false;
 });

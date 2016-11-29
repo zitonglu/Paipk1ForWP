@@ -1207,7 +1207,7 @@ background:#428bca;
 @media(min-width: 992px){
 	.single-format-video .comment-box,
 	.single-format-video .comment-post,
-	.single-noside .article,
+	.single-format-aside .article,
 	.single-search .article{width:970px}
 }
 .single-search .section .tab span,
