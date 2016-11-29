@@ -8,10 +8,17 @@
  */
 ?>
 <div class="container">
-<article class="col-md-9 article">
+<article class="container article">
 
-<section class="section">
-	<h2 class="title"><?php the_title(); ?></h2>
+<div class="col-md-7 video-left">
+<?php 
+$embed = get_post_meta(get_the_ID(), 'paipk1_video_embed', TRUE);
+if($embed){
+	echo stripslashes(htmlspecialchars_decode($embed));
+}?>
+</div><!-- video end -->
+
+<section class="col-md-5 section video-right">
 	<?php include (TEMPLATEPATH . '/template-parts/baidushare.php'); ?>
 	<div class="tab">
 		<i class="glyphicon glyphicon-time"></i>&nbsp;<?php the_time('Y-m-d h:i'); ?>
@@ -24,8 +31,10 @@
 			<a href="#SOHUCS" title="<?php _e('Comment','paipk1'); ?>"><?php echo comments_users($post->ID); ?></a>
 		</span>
 	</div><!-- Single-nav end -->
+	<h2 class="title"><?php the_title(); ?></h2>
 	<?php the_content(); ?>
 </section>
+	<div class="clearflx"></div>
 
 <div class="text-center more-btn">
 <?php $prev_post = get_adjacent_post('','',ture);$next_post = get_adjacent_post('','',false);if(get_previous_post()): ?>
@@ -141,11 +150,4 @@ while( $query_posts->have_posts() ) { $query_posts->the_post(); ?>
 <?php comments_template( '', true ); ?>
 
 </article>
-
-<div class="col-md-3 single-box hidden-xs hidden-sm sidebar">
-	<aside class="single-right theiaStickySidebar">
-		<?php get_sidebar(); ?>
-	</aside>
-</div><!-- sidebar -->
-
 </div>
