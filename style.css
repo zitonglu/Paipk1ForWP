@@ -24,8 +24,8 @@ a:hover,a:focus{color:#555}
 	7.Search page
 	8.Other
 */
-.media-box,.media-box:hover,.media-box>a>img,.media-box:hover>a>img,#divPrevious li,
-#divPrevious li:hover,#divPrevious li p,#divPrevious li:hover p,.threepic img,
+.media-box,.media-box:hover,.media-box>a>img,.media-box:hover>a>img,#widget_recent_entries li,
+#widget_recent_entries li:hover,#widget_recent_entries li p,#widget_recent_entries li:hover p,.threepic img,
 .threepic img:hover,.QQstyle:hover,.comment-box a img,.comment-box a:hover img,
 .weiyu a img,.weiyu:hover a img,.index-pic .post-box:hover img.articleIMG,
 .index-pic .post-box img.articleIMG,.index-pic .post-box:hover .post-text,
@@ -221,17 +221,17 @@ fieldset[disabled] .navbar-mycolor .btn-link:focus {
 	font-size: 12px;
 	margin-right: 4px;
 }
-#divSearchPanel form input{
+#widget_search form input{
 	color: #666;
 	background: #ededed;
 	border: 1px solid #cccccc;
 	padding-top:2px;
 	padding-bottom:2px;
 }
-#divSearchPanel form input:first-child{
+#widget_search form input:first-child{
 	width:calc(100% - 50px);
 }
-#divSearchPanel form input:last-child{
+#widget_search form input:last-child{
 	padding-left:6px;
 	padding-right:6px;
 }
@@ -285,8 +285,7 @@ fieldset[disabled] .navbar-mycolor .btn-link:focus {
 #divStatistics ul,
 #divLinkage ul,
 #divCatalog ul,
-#divMisc ul,
-#divTags ul{
+#divMisc ul{
 	list-style: none;
 	display: inline-block;
 }
@@ -294,15 +293,14 @@ fieldset[disabled] .navbar-mycolor .btn-link:focus {
 #divFavorites ul,
 #divLinkage ul,
 #divCatalog ul,
-#divMisc ul,
-#divTags ul{
+#divMisc ul{
 	padding-left:0;
 	margin-bottom:0px;
 }
 #divFavorites li,
 #divLinkage li,
 #divCatalog li,
-#divTags li{
+#widget_tag_cloud a{
 	margin: 0 3px 3px 0;
 	padding: 1px 9px 3px;
 	display: inline-block;
@@ -314,20 +312,20 @@ fieldset[disabled] .navbar-mycolor .btn-link:focus {
 #divFavorites a,
 #divLinkage a,
 #divCatalog a,
-#divTags a{
+#widget_tag_cloud a{
 	color: #666;
 }
 #divFavorites li:hover,
 #divLinkage li:hover,
 #divCatalog li:hover,
-#divTags li:hover{
+#widget_tag_cloud a:hover{
 	background-color:#428bca;
 	color:#fff;
 }
 #divFavorites li:hover a,
 #divLinkage li:hover a,
 #divCatalog li:hover a,
-#divTags li:hover a{
+#widget_tag_cloud a:hover{
 	text-decoration: none;
 	color:#fff;
 }
@@ -337,7 +335,7 @@ fieldset[disabled] .navbar-mycolor .btn-link:focus {
 }
 #divComments ul,
 #divArchives ul,
-#divPrevious ul{
+#widget_recent_entries ul{
 	padding-left:0;
 }
 #divComments>div{
@@ -359,14 +357,14 @@ fieldset[disabled] .navbar-mycolor .btn-link:focus {
 	border-radius:4px;
 	transition:all .2s ease-in-out;
 }
-#divPrevious li:hover{
+#widget_recent_entries li:hover{
 	border-color:#98699b;
 }
-#divPrevious li:hover p{
+#widget_recent_entries li:hover p{
 	background-color:#98699b;
 	color: #fff;
 }
-#divPrevious li a{
+#widget_recent_entries li a{
 	display:block;
 	margin-left:2px;
 	overflow:hidden;
@@ -375,7 +373,7 @@ fieldset[disabled] .navbar-mycolor .btn-link:focus {
 	color:#555;
 	line-height:1.6;
 }
-#divPrevious li a::before{
+#widget_recent_entries li a::before{
 	position:relative;
 	margin-bottom:2px;
 	margin-right:8px;
@@ -387,28 +385,28 @@ fieldset[disabled] .navbar-mycolor .btn-link:focus {
 	box-shadow:0 1px 2px #757575;
 	text-decoration: none;
 }
-#divPrevious li:nth-child(n) a::before{
+#widget_recent_entries li:nth-child(n) a::before{
 	border:1px solid #fd5f00;
 }
-#divPrevious li:nth-child(n) a:hover{
+#widget_recent_entries li:nth-child(n) a:hover{
 	color:#fd5f00;
 }
-#divPrevious li:nth-child(2n) a::before{
+#widget_recent_entries li:nth-child(2n) a::before{
 	border:1px solid #00a635;
 }
-#divPrevious li:nth-child(2n) a:hover{
+#widget_recent_entries li:nth-child(2n) a:hover{
 	color:#00a635;
 }
-#divPrevious li:nth-child(3n) a::before{
+#widget_recent_entries li:nth-child(3n) a::before{
 	border:1px solid #b92400;
 }
-#divPrevious li:nth-child(3n) a:hover{
+#widget_recent_entries li:nth-child(3n) a:hover{
 	color:#b92400;
 }
-#divPrevious li:nth-child(4n) a::before{
+#widget_recent_entries li:nth-child(4n) a::before{
 	border:1px solid #00a9da;
 }
-#divPrevious li:nth-child(4n) a:hover{
+#widget_recent_entries li:nth-child(4n) a:hover{
 	color:#00a9da;
 }
 #divArchives li{

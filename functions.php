@@ -189,4 +189,21 @@ function paipk1_get_post_images($post_content){
   return false;
   }
 }
+/**
+ * ctr tag cloud
+ *
+ * @since paipk1 1.0
+ *
+ * @return null
+ */
+function paipk1_tag_cloud_filter($args = array()) {
+  $args['smallest'] = 14;
+  $args['largest'] = 14;
+  $args['unit'] ='px';
+  $args['number'] =20;
+  $args['orderby']='count';
+  $args['order']='RAND';
+  return $args;
+}
+add_filter('widget_tag_cloud_args', 'paipk1_tag_cloud_filter', 10);
 ?>
