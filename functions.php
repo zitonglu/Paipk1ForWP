@@ -190,7 +190,7 @@ function paipk1_get_post_images($post_content){
   }
 }
 /**
- * ctr tag cloud
+ * control tag cloud
  *
  * @since paipk1 1.0
  *
@@ -206,4 +206,20 @@ function paipk1_tag_cloud_filter($args = array()) {
   return $args;
 }
 add_filter('widget_tag_cloud_args', 'paipk1_tag_cloud_filter', 10);
+/**
+ * Number of queries, loading time and memory usage
+ *
+ * @since paipk1 1.0
+ *
+ * @return echo
+ */
+function performance( $visible = false ) {
+  $stat = sprintf(  '%d queries in %.3f seconds, using %.2fMB memory',
+    get_num_queries(),
+    timer_stop( 0, 3 ),
+    memory_get_peak_usage() / 1024 / 1024
+  );
+  echo $visible ? $stat : "<!-- {$stat} -->" ;
+}
+add_action( 'wp_footer', 'performance', 20 );
 ?>
