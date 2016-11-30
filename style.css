@@ -199,18 +199,17 @@ fieldset[disabled] .navbar-mycolor .btn-link:focus {
 	margin-right:6px;
 	color:#b3e5fc;
 }
-.widget h5.glyphicon-divTags::before{content:'\e042'}
-.widget h5.glyphicon-divArchives::before{content:'\e012'}
+#widget_tag_cloud h5.glyphicon::before{content:'\e042'}
+#widget_categories h5.glyphicon::before{content:'\e012'}
 #widget_recent_entries h5.glyphicon::before{content:'\270f'}
-.widget h5.glyphicon-divLinkage::before{content:'\e144'}
-.widget h5.glyphicon-divComments::before{content:'\e111'}
-.widget h5.glyphicon-divAuthors::before{content:'\e008'}
-.widget h5.glyphicon-divContorPanel::before{content:'\e019'}
-.widget h5.glyphicon-divSearchPanel::before{content:'\e003'}
-.widget h5.glyphicon-divCatalog::before{content:'\e118'}
-.widget h5.glyphicon-divFavorites::before{content:'\e005'}
-.widget h5.glyphicon-divMisc::before{content:'\e060'}
-.widget h5.glyphicon-divStatistics::before{content:'\e135'}
+#widget_rss h5.glyphicon::before{content:'\e144'}
+#widget_recent_comments h5.glyphicon::before{content:'\e111'}
+#widget_pages h5.glyphicon::before{content:'\e135'}
+#widget_meta h5.glyphicon::before{content:'\e019'}
+#widget_search h5.glyphicon::before{content:'\e003'}
+#widget_nav_menu h5.glyphicon::before{content:'\e118'}
+#widget_text h5.glyphicon::before{content:'\e005'}
+#widget_calendar h5.glyphicon::before{content:'\e109'}
 .widget>div{
 	overflow:hidden;
 }
