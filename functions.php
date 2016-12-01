@@ -138,6 +138,13 @@ if( function_exists('register_sidebar') ) {
     'before_title' => '<div class="modulename"><h5 class="glyphicon">',
     'after_title' => '</h5></div>'
   ));
+  register_sidebar(array(
+    'name' => __('SingleSidebar','paipk1'),
+    'before_widget' => '<section class="widget" id="%2$s">',
+    'after_widget' => '</section>',
+    'before_title' => '<div class="modulename"><h5 class="glyphicon">',
+    'after_title' => '</h5></div>'
+  ));
 }
 if ( ! function_exists( 'paipk1_paging_nav' ) ) :
 /**
