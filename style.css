@@ -259,7 +259,8 @@ fieldset[disabled] .navbar-mycolor .btn-link:focus {
 .screen-reader-text,
 #wp-calendar tfoot,
 #widget_rss .rss-widget-icon,
-.rss-date{
+.rss-date,
+.post-date{
 	display:none;
 }
 #wp-calendar{
@@ -1162,6 +1163,7 @@ background:#428bca;
 	width: auto;
 }
 .single .article .comment-box{
+	margin-bottom: 20px;
 	padding-top: 10px;
 	border-top:1px solid #dedede;
 }
@@ -1171,7 +1173,7 @@ background:#428bca;
 	font-weight: bold;
 }
 .single .article .comment-box img{
-	width:64px;
+	width:48px;
 	height: auto;
 	border-radius:50%;
 }

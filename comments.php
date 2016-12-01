@@ -78,12 +78,30 @@ if ( post_password_required() )
 <?php if(have_comments()): ?>
 <div class="comment-box" id="comment">
 <h4><span class="glyphicon glyphicon-comment"></span>&nbsp;<?php _e('Comment','paipk1') ?><?php _e('List','paipk1') ?></h4>
-	<?php
-	wp_list_comments( array(
-		'short_ping'  => true,
-		'avatar_size' => 50,
-	) );
-	?>
+
+<?php function qiuye_comment($comment, $args, $depth){ $GLOBALS['comment'] = $comment; ?>
+<div class="media" id="comment-<?php comment_ID(); ?>">
+	<div class="media-left">
+		<a href="#comment" onclick="RevertComment('{$comment.ID}')">
+			<?php if (function_exists('get_avatar') && get_option('show_avatars')) { 
+				echo get_avatar($comment,48); } ?>
+		</a>
+	</div>
+	<div class="media-body">
+		<h4 class="media-heading">
+		<?php echo get_comment_author_link()?>&nbsp;
+		<b><?php echo get_comment_time('Y-m-d'); ?> <span class="glyphicon glyphicon-time"></span>&nbsp;<?php echo get_comment_time('H:i'); ?>&nbsp;
+		<span class="glyphicon glyphicon-heart-empty"></span>&nbsp;<?php comment_reply_link(array_merge( $args, array('reply_text' => __('Reply','paipk1'),'depth' => $depth, 'max_depth' => $args['max_depth']))) ?>&nbsp;<?php edit_comment_link(__('Edit','paipk1')); ?>
+		</b>
+		</h4>
+		<?php comment_text(); ?>
+		<p><?php if ($comment->comment_approved == '0'): ?>
+			<?php _e('Your comments are being reviewed and will be shown later','paipk1')?><?php endif?>
+		</p>	
+	</div>
+</div>
+<?php } wp_list_comments('type=comment&callback=qiuye_comment');?>
+
 		<?php if(get_comment_pages_count()>1 && get_option('page_comments')): ?>
 		<div class="text-center">
 <?php previous_comments_link( __( '&larr; Prev') ); ?>&nbsp;
