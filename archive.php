@@ -1,10 +1,10 @@
 <?php
 /**
- * The template for displaying single pages
+ * The template for displaying Archive pages
  *
  * @package  paipk1
  * @since paipk1 1.0
- */ 
+ */
 get_header(); ?>
 <body <?php body_class(); ?>>
 <?php include (TEMPLATEPATH . '/template-parts/nav.php'); ?>
