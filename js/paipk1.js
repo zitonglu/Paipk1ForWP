@@ -9,6 +9,10 @@ $(document).ready(function() {
 			return false;
 		}
 	});
+	// 改变顶部导航结构
+	$(".menu-item-has-children").addClass("dropdown");
+	$("ul.sub-menu").removeClass("sub-menu").addClass("dropdown-menu");
+	$(".menu-item-has-children>a").attr("data-toggle", "dropdown");
 	// 更换翻页class
 	$("nav#page>ul.page-numbers").removeClass("page-numbers").addClass("pagination");
 	// 给友情链接加弹出页面

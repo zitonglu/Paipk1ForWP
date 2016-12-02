@@ -20,22 +20,18 @@
 			<a class="navbar-brand visible-xs" href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
 		</div>
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-			<ul class="nav navbar-nav" id="divNavBar">
 <?php 
 	if ( has_nav_menu( 'primary' )) {
 	wp_nav_menu( array(
 	'theme_location'	=> 'primary',
-	'container' 		=> 'div',
-	'container_class' 	=> 'collapse navbar-collapse',
-	'container_id' 		=> 'bs-example-navbar-collapse-1',
 	'menu_class'		=> 'nav navbar-nav',
+	'menu_id'			=> 'divNavBar',
 	'before'   			=> '',
 	'after'     		=> '',
-	'depth'          	=> 1,
+	'depth'          	=> 2,
 	) );
 	}
 ?>
-			</ul>
 			<ul class="nav navbar-nav navbar-right hidden-xs">
 				<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="glyphicon glyphicon-search"></i></a>
 				<div class="dropdown-menu search-box">
