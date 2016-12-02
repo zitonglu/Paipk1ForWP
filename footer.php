@@ -11,14 +11,15 @@
 	    Powered By wordpress. Theme by <a href="http://www.paipk.com" title="designer" target="_blank" >Paipk.com.</a>&nbsp;<?php echo get_option( 'zh_cn_l10n_icp_num' ); ?>
 	</p>
 <?php 
-	if ( has_nav_menu( 'link' ) && is_home()) {
+	if ( has_nav_menu('link')) {
 	wp_nav_menu( array(
+	'theme_location'	=> 'link',
 	'menu_id' 			=> 'footerlinks',
 	'menu_class'		=> 'list-inline',
 	'before'   			=> '<li>',
 	'after'     		=> '</li>',
 	'depth'          	=> 1,
-	) );
+	));
 	}
 ?>
 </footer>
