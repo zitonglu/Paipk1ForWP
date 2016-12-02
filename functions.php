@@ -31,7 +31,8 @@ function paipk1_setup() {
   add_theme_support('post-formats', array('aside', 'image', 'video', 'audio', 'quote', 'link', 'gallery') );
   // This theme uses wp_nav_menu() in one location.
   register_nav_menus( array(
-    'primary' => __('Primary Menu', 'paipk1')
+    'primary' => __('Primary Menu', 'paipk1'),
+    'link' => __('Link', 'paipk1')
   ) );
 }
 add_action('after_setup_theme','paipk1_setup');

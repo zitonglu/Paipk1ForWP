@@ -10,6 +10,17 @@
 	    Copyright © 2016-2017 <a href="<?php echo esc_url(home_url('/')); ?>" title="<?php bloginfo( 'name' ); ?>"><?php bloginfo( 'name' ); ?></a>&nbsp;
 	    Powered By wordpress. Theme by <a href="http://www.paipk.com" title="designer" target="_blank" >Paipk.com.</a>&nbsp;<?php echo get_option( 'zh_cn_l10n_icp_num' ); ?>
 	</p>
+<?php 
+	if ( has_nav_menu( 'link' ) && is_home()) {
+	wp_nav_menu( array(
+	'menu_id' 			=> 'footerlinks',
+	'menu_class'		=> 'list-inline',
+	'before'   			=> '<li>',
+	'after'     		=> '</li>',
+	'depth'          	=> 1,
+	) );
+	}
+?>
 </footer>
 <div class="hidden-xs top hiddened" id="backTop">
     <a target="_blank" title="comment me" href="http://wpa.qq.com/msgrd?v=3&uin={$zbp->Config('paipk1')->QQ}&site={$host}&menu=yes"><img src="<?php bloginfo('template_url'); ?>/images/qq.png" alt="QQ" class="QQstyle"></a><br>

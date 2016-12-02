@@ -11,6 +11,8 @@ $(document).ready(function() {
 	});
 	// 更换翻页class
 	$("nav#page>ul.page-numbers").removeClass("page-numbers").addClass("pagination");
+	// 给友情链接加弹出页面
+	$("#footerlinks").children("li").children("a").attr("target", "_blank");
 });
 // 返回顶部时影藏
 $(function(){
