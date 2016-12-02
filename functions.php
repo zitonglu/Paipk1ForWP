@@ -230,4 +230,5 @@ function performance( $visible = false ) {
   echo $visible ? $stat : "<!-- {$stat} -->" ;
 }
 add_action( 'wp_footer', 'performance', 20 );
+
 ?>
