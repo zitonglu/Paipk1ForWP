@@ -231,4 +231,24 @@ function performance( $visible = false ) {
 }
 add_action( 'wp_footer', 'performance', 20 );
 
+function mb_mb_hot(){
+  $popular = new WP_Query('orderby=comment_count&posts_per_page=10');
+  while ($popular->have_posts()) : $popular->the_post();   ?>
+  <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>   
+<?php endwhile;  
+}
+/**
+ * ADD sidebar widget:comment
+ *
+ * @uses register_sidebar_widget();
+ * @since paipk1 1.0
+ *
+ * @return echo
+ */
+if( function_exists( 'register_sidebar_widget' ) ) {   
+    register_sidebar_widget(__('Comment','paipk1'),'paipk1_widget_Comment');   
+}
+function paipk1_widget_Comment() {
+  include(TEMPLATEPATH . '/includes/paipk1-widget-Comment.php');
+}
 ?>

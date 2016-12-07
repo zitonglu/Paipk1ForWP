@@ -335,7 +335,7 @@ fieldset[disabled] .navbar-mycolor .btn-link:focus {
 #divLinkage li:hover a,
 #widget_categories li:hover a,
 #widget_tag_cloud a:hover,
-#widget_nav_menu li:hover{
+#widget_nav_menu a:hover{
 	text-decoration: none;
 	color:#fff;
 }
