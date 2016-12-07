@@ -206,7 +206,8 @@ fieldset[disabled] .navbar-mycolor .btn-link:focus {
 #widget_archive h5.glyphicon::before{content:'\e012'}
 #widget_recent_entries h5.glyphicon::before{content:'\270f'}
 #widget_rss h5.glyphicon::before{content:'\e144'}
-#widget_recent_comments h5.glyphicon::before{content:'\e111'}
+#widget_recent_comments h5.glyphicon::before,
+#divComments h5.glyphicon::before{content:'\e111'}
 #widget_pages h5.glyphicon::before{content:'\e143'}
 #widget_meta h5.glyphicon::before{content:'\e019'}
 #widget_search h5.glyphicon::before{content:'\e003'}
@@ -356,7 +357,7 @@ fieldset[disabled] .navbar-mycolor .btn-link:focus {
 	margin-bottom: 10px;
 	list-style-type: none;
 }
-#divComments .img-comment {
+#divComments .img-comment img{
 	width: 40px;
 	height: 40px;
 	float: left;
@@ -364,9 +365,12 @@ fieldset[disabled] .navbar-mycolor .btn-link:focus {
 	border-radius:50%;
 	transition:all .2s;
 }
-#divComments .img-comment:hover{
+#divComments .img-comment:hover img{
 	border-radius:4px;
 	transition:all .2s ease-in-out;
+}
+#divComments small{
+	color:#999;
 }
 #widget_recent_entries li:hover,
 #widget_rss li:hover,
