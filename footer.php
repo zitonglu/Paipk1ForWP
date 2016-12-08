@@ -24,7 +24,9 @@
 ?>
 </footer>
 <div class="hidden-xs top hiddened" id="backTop">
-    <a target="_blank" title="comment me" href="http://wpa.qq.com/msgrd?v=3&uin={$zbp->Config('paipk1')->QQ}&site={$host}&menu=yes"><img src="<?php bloginfo('template_url'); ?>/images/qq.png" alt="QQ" class="QQstyle"></a><br>
+<?php if(get_option('paipk1_qq') != ''): ?>
+    <a target="_blank" title="comment me" href="http://wpa.qq.com/msgrd?v=3&uin=<?php echo get_option('paipk1_qq'); ?>&site=<?php echo esc_url(home_url('/')); ?>&menu=yes"><img src="<?php bloginfo('template_url'); ?>/images/qq.png" alt="QQ" class="QQstyle"></a><br>
+<?php endif ?>
     <a href="#top" id="returnTop"><span class="glyphicon glyphicon-chevron-up"></span></a>
 </div>
 <?php if(get_option('paipk1_if_bootstrap') == 'checked'): ?>
