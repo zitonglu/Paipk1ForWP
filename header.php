@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>
 <?php if ( is_home() ) {
-        bloginfo('name'); echo " - "; bloginfo('description');
+        bloginfo('name');
     } elseif ( is_category() ) {
         single_cat_title(); echo " - "; bloginfo('name');
     } elseif (is_single() || is_page() ) {
@@ -42,5 +42,6 @@
 <script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
 <script src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
+<?php echo get_option('paipk1_baiduStatistics'); ?>
 <?php flush(); ?>
 </head>
