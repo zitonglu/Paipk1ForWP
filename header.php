@@ -12,7 +12,7 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>
+<title>
 <?php if ( is_home() ) {
         bloginfo('name');
     } elseif ( is_category() ) {
@@ -25,9 +25,44 @@
         echo '404';
     } else {
 		wp_title( '|', true, 'right' ); 
-	}
-?>	
-	</title>
+}?>
+</title>
+
+<?php if(get_option('paipk1_if_SEO') == 'checked'){
+$description = '';
+$keywords = '';
+if (is_home() || is_page()) {
+	$description = get_option('paipk1_homeDescription');
+	$keywords = get_option('paipk1_homeKeyword');
+}
+elseif (is_single()) {
+   $description1 = get_post_meta($post->ID, "description", true);
+   $description2 = str_replace("\n","",mb_strimwidth(strip_tags($post->post_content), 0, 200, "…", 'utf-8'));
+   $description = $description1 ? $description1 : $description2;
+   $keywords = get_post_meta($post->ID, "keywords", true);
+   if($keywords == '') {
+      $tags = wp_get_post_tags($post->ID);
+      foreach ($tags as $tag ) {
+         $keywords = $keywords . $tag->name . ", ";
+      }
+      $keywords = rtrim($keywords, ', ');
+   }
+}
+elseif (is_category()) {
+   $description = category_description();
+   $keywords = single_cat_title('', false);
+}
+elseif (is_tag()){
+   $description = tag_description();
+   $keywords = single_tag_title('', false);
+}
+$description = trim(strip_tags($description));
+$keywords = trim(strip_tags($keywords));
+?>
+<meta name="description" content="<?php echo $description; ?>" />
+<meta name="keywords" content="<?php echo $keywords; ?>" />
+<?php }?><!-- seo end -->
+
 <?php if(get_option('paipk1_if_bootstrap') == 'checked'): ?>
 	<link rel='stylesheet prefetch' href='<?php bloginfo('template_url'); ?>/css/bootstrap.min.css'>
 <?php else: ?>
