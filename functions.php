@@ -1,6 +1,8 @@
 <?php
 // video
-require_once(TEMPLATEPATH . '/includes/theme-postmeta.php');
+require_once(TEMPLATEPATH . '/includes/paipk1-postmeta.php');
+// theme setting
+require_once(TEMPLATEPATH . '/includes/paipk1-setting.php');
 /**
  * paipk1 setup.
  *

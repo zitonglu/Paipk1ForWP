@@ -28,7 +28,11 @@
 	}
 ?>	
 	</title>
+<?php if(get_option('paipk1_if_bootstrap') == 'checked'): ?>
+	<link rel='stylesheet prefetch' href='<?php bloginfo('template_url'); ?>/css/bootstrap.min.css'>
+<?php else: ?>
 	<link rel='stylesheet prefetch' href='http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css'>
+<?php endif ?>
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style.css?v=1" type="text/css" media="screen" />
 	<link rel="alternate" type="application/rss+xml" title="RSS 2.0 - All articles" href="<?php echo get_bloginfo('rss2_url'); ?>" />
 	<link rel="alternate" type="application/rss+xml" title="RSS 2.0 - All coments" href="<?php bloginfo('comments_rss2_url'); ?>" />
