@@ -23,6 +23,7 @@ a:hover,a:focus{color:#555}
 	6.Single.
 	7.Search page
 	8.Other
+	9.Wordpress
 */
 .media-box,.media-box:hover,.media-box>a>img,.media-box:hover>a>img,#widget_recent_entries li,
 #widget_recent_entries li:hover,#widget_recent_entries li p,#widget_recent_entries li:hover p,.threepic img,
@@ -1370,3 +1371,20 @@ div.prism-show-language > div.prism-show-language-label[data-language]{
 }
 .hiddened{display:none}
 .text-indent{text-indent:2em}
+/* wordpress */
+.aligncenter{
+	clear:both;
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+}
+.alignright{
+	display:inline;
+	float:right;
+	margin-left:1.625em;
+}
+.alignleft {
+	display:inline;
+	float:left;
+	margin-right:1.625em;
+}
