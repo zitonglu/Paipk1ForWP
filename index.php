@@ -18,6 +18,10 @@ get_header(); ?>
 		</div>
 	</aside>
 	<div class="col-md-7 col-sm-9 list-body">
+	<?php if( get_option('paipk1_if_Carousel') == 'checked' ){
+		include TEMPLATEPATH .'/template-parts/istop.php';}
+	?><!-- istop -->
+
 		<?php if(have_posts()) : ?>
 <div class="article">
 	<ul class="media-list">
