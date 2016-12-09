@@ -19,6 +19,7 @@
 		<span class="sr-only">Next</span>
 	</a>
 </div>
+<?php if(!is_category('pic')):?>
 <div class="istop">
 <div class="float-right">
 	<?php if(get_option('paipk1_baiduShare') == ''){
@@ -36,3 +37,4 @@
 <?php }?>
 </p>
 </div>
+<?php endif?>
