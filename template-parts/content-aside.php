@@ -30,4 +30,10 @@
 
 <?php comments_template( '', true ); ?>
 
+<?php if(get_option('paipk1_CommentAD') != ''):?>
+	<div class="hidden-xs hidden-sm singlefooterAD">
+		<?php echo get_option('paipk1_CommentAD'); ?>
+	</div><!-- AD end -->
+<?php endif?>
+
 </article>

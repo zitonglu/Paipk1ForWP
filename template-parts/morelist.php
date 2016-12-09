@@ -32,7 +32,7 @@
   </div>
 
   <div class="col-sm-4 singlebottomAD">
-    <!-- AD -->
+    <?php echo get_option('paipk1_BottomAD'); ?>
   </div>
 
   <div class="clearfix"></div>
