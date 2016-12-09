@@ -8,16 +8,11 @@
  * @since paipk1 1.0
  */
 get_header(); ?>
-<body id="index" <?php body_class('index'); ?>>
+<body <?php body_class('index'); ?>>
 <?php include (TEMPLATEPATH . '/template-parts/nav.php'); ?>
 
 <div class="container">
-	<aside class="col-md-2 col-sm-3 hidden-xs sidebar">
-		<div class="theiaStickySidebar">
-		<?php get_sidebar('left'); ?>
-		</div>
-	</aside>
-	<div class="col-md-7 col-sm-9 list-body">
+	<div class="col-md-9 list-body">
 	<?php if( get_option('paipk1_if_Carousel') == 'checked' ){
 		include TEMPLATEPATH .'/template-parts/istop.php';}
 	?><!-- istop -->
