@@ -29,5 +29,10 @@
 			<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
 	<?php } ?>
 </div>
-<p><a href="{$topText.Url}" title="{$topText.Title}"><i class="glyphicon glyphicon-fire"></i>&nbsp;{$topText.Title}</a></p>
+<?php $post_id = get_option('paipk1_indexTopOne');?>
+<p>
+<?php if($post_id == ''){echo bloginfo('description');}else{?>
+<a href="<?php echo get_post($post_id)->guid;?>" title="<?php echo get_post($post_id)->post_title;?>"><i class="glyphicon glyphicon-fire"></i>&nbsp;<?php echo get_post($post_id)->post_title;?></a>
+<?php }?>
+</p>
 </div>
