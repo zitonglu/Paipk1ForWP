@@ -5,7 +5,15 @@
  * @since paipk1 1.0
  */
 ?>
+<?php if(get_option('paipk1_bottom')!=''):?>
+	<div class="jumbotron bottom hidden-xs">
+		<div class="container">
+			<?php echo get_option('paipk1_bottom');?>
+		</div>
+	</div><!-- bottom end -->
+<?php endif?>
 <footer class="footer">
+	<p><?php echo get_option('paipk1_Copyright');?></p>
 	<p>
 	    Copyright © 2016-2017 <a href="<?php echo esc_url(home_url('/')); ?>" title="<?php bloginfo( 'name' ); ?>"><?php bloginfo( 'name' ); ?></a>&nbsp;
 	    Powered By wordpress. Theme by <a href="http://www.paipk.com" title="designer" target="_blank" >Paipk.com.</a>&nbsp;<?php echo get_option( 'zh_cn_l10n_icp_num' ); ?>
