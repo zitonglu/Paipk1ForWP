@@ -253,4 +253,19 @@ if( function_exists( 'register_sidebar_widget' ) ) {
 function paipk1_widget_Comment() {
   include(TEMPLATEPATH . '/includes/paipk1-widget-Comment.php');
 }
+/**
+ * ADD a button at Articles editor
+ *
+ * @uses admin_print_footer_scripts;
+ * @since paipk1 1.0
+ *
+ * @return script
+ */
+function paipk1_quicktags() { 
+  if (wp_script_is('quicktags')){?>
+  <script type="text/javascript">
+    QTags.addButton( 'textIndent','text-indent:2em','<p style="text-indent:2em">','</p>');
+  </script>
+<?php }}
+add_action('admin_print_footer_scripts', 'paipk1_quicktags'); 
 ?>

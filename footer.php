@@ -12,6 +12,7 @@
 		</div>
 	</div><!-- bottom end -->
 <?php endif?>
+
 <footer class="footer">
 	<p><?php echo get_option('paipk1_Copyright');?></p>
 	<p>
