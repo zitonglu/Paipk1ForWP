@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: paipk1 zh_CN\n"
-"POT-Creation-Date: 2016-11-27 22:20+0800\n"
-"PO-Revision-Date: 2016-11-27 22:20+0800\n"
+"POT-Creation-Date: 2016-12-10 20:27+0800\n"
+"PO-Revision-Date: 2016-12-10 20:27+0800\n"
 "Last-Translator: \n"
 "Language-Team: zitonglu\n"
 "Language: zh_CN\n"
@@ -17,7 +17,9 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 
 #: comments.php:21 comments.php:27 comments.php:51 comments.php:80
-#: functions.php:96 template-parts/content.php:21
+#: functions.php:101 functions.php:251 includes/paipk1-widget-Comment.php:1
+#: template-parts/content-aside.php:23 template-parts/content-video.php:28
+#: template-parts/content.php:31 template-parts/list-quote.php:21
 msgid "Comment"
 msgstr "评论"
 
@@ -45,61 +47,189 @@ msgstr "提交评论"
 msgid "Sign out"
 msgstr "登出"
 
-#: comments.php:80
+#: comments.php:80 includes/paipk1-widget-Comment.php:1
 msgid "List"
 msgstr "列表"
 
-#: comments.php:89
+#: comments.php:94
+msgid "Reply"
+msgstr "回复"
+
+#: comments.php:94
+msgid "Edit"
+msgstr "编辑"
+
+#: comments.php:99
+msgid "Your comments are being reviewed and will be shown later"
+msgstr "您的评论正在审查，将稍后显示"
+
+#: comments.php:107
 msgid "&larr; Prev"
 msgstr "《 上一页"
 
-#: comments.php:90
+#: comments.php:108
 msgid "Next &rarr;"
 msgstr "下一页 》"
 
-#: functions.php:32
+#: functions.php:36
 msgid "Primary Menu"
 msgstr "主菜单"
 
-#: functions.php:125
+#: functions.php:37
+msgid "Link"
+msgstr "友情链接"
+
+#: functions.php:131
 msgid "RightSidebar"
 msgstr "右侧栏"
 
-#: functions.php:132
+#: functions.php:138
 msgid "LeftSidebar"
 msgstr "左侧栏"
 
-#: template-parts/content.php:29
+#: functions.php:145
+msgid "SingleSidebar"
+msgstr "页面侧栏"
+
+#: functions.php:176 template-parts/morelist.php:12
 msgid "Previous"
 msgstr "上一篇"
 
-#: template-parts/content.php:32
-msgid "Gift"
-msgstr "打赏"
-
-#: template-parts/content.php:36
+#: functions.php:177 template-parts/morelist.php:19
 msgid "Next"
 msgstr "下一篇"
 
-#: template-parts/content.php:42 template-parts/content.php:46
+#: includes/paipk1-postmeta.php:1
+msgid "Video Setting"
+msgstr "视频设置"
+
+#: includes/paipk1-postmeta.php:1
+msgid "Insert Video Code"
+msgstr "插入视频代码"
+
+#: includes/paipk1-postmeta.php:1
+msgid "Please set the video container to"
+msgstr "请将视频容器设置为"
+
+#: includes/paipk1-setting.php:1
+msgid "Theme Setting"
+msgstr "主题基础设置"
+
+#: includes/paipk1-setting.php:1
+msgid "AD Setting"
+msgstr "广告设置"
+
+#: includes/paipk1-setting.php:1
+msgid "Carousel Setting"
+msgstr "旋转片设置"
+
+#: includes/paipk1-setting.php:1
+msgid "use out bootstrap"
+msgstr "调用外部Bootstrap"
+
+#: includes/paipk1-setting.php:1
+msgid "for china"
+msgstr "中国特有"
+
+#: includes/paipk1-setting.php:1
+msgid "Statistics"
+msgstr "统计"
+
+#: includes/paipk1-setting.php:1
+msgid "Share"
+msgstr "分享"
+
+#: includes/paipk1-setting.php:1
+msgid "Code"
+msgstr "代码"
+
+#: includes/paipk1-setting.php:1
+msgid "home Keyword"
+msgstr "首页关键词"
+
+#: includes/paipk1-setting.php:1
+msgid "home Description"
+msgstr "首页描述"
+
+#: includes/paipk1-setting.php:1
+msgid "Bottom Setting"
+msgstr "底部设置"
+
+#: includes/paipk1-setting.php:1
+msgid "You can insert the code at the bottom"
+msgstr "您可以在底部插入代码"
+
+#: includes/paipk1-setting.php:1
+msgid "Copyright"
+msgstr "版权"
+
+#: includes/paipk1-setting.php:1
+msgid "Submit"
+msgstr "按钮"
+
+#: includes/paipk1-setting.php:1
+msgid "Single Bottom AD"
+msgstr "页面底板广告"
+
+#: includes/paipk1-setting.php:1
+msgid "Comment Bottom AD"
+msgstr "评论底部广告"
+
+#: includes/paipk1-setting.php:1
+msgid "open the Carousel,and you can TOP one single of ID"
+msgstr "启用顶部幻灯片，并置顶文章，ID："
+
+#: includes/paipk1-setting.php:1
+msgid "addTable"
+msgstr "增加一行"
+
+#: includes/paipk1-setting.php:1
+msgid "deleteTable"
+msgstr "删除一行"
+
+#: includes/paipk1-setting.php:1
+msgid "option"
+msgstr "选项"
+
+#: includes/paipk1-setting.php:1
+msgid "Picture URL"
+msgstr "图片链接"
+
+#: includes/paipk1-setting.php:1
+msgid "Link address"
+msgstr "外链地址"
+
+#: includes/paipk1-setting.php:1
+msgid "Picture name"
+msgstr "图片描述"
+
+#: template-parts/morelist.php:15
+msgid "Gift"
+msgstr "打赏"
+
+#: template-parts/morelist.php:25 template-parts/morelist.php:29
 msgid "Author"
 msgstr "作者"
 
-#: template-parts/content.php:61
+#: template-parts/morelist.php:45
 msgid "RelateArticles"
 msgstr "相关文章"
 
-#: template-parts/content.php:62
+#: template-parts/morelist.php:46
 msgid "HotArticles"
 msgstr "热门文章"
 
-#: template-parts/content.php:95
+#: template-parts/morelist.php:79
 msgid "has been viewed "
 msgstr "文章被浏览 "
 
-#: template-parts/content.php:106
+#: template-parts/morelist.php:90
 msgid "No related articles"
 msgstr "暂无相关文章"
+
+#: template-parts/nav.php:40
+msgid "Please enter the search content"
+msgstr "请输入搜索内容"
 
 #~ msgid "Right sidebar"
 #~ msgstr "右侧栏"
