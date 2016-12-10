@@ -239,7 +239,6 @@ fieldset[disabled] .navbar-mycolor .btn-link:focus {
 	position:relative;
     background:#eee;
     background:linear-gradient(-150deg,transparent 1.5em,#eee 0);
-    margin-bottom:14px;
 }
 #calendar_wrap::before{
 	content: '';

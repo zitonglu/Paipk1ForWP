@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: paipk1 zh_CN\n"
 "POT-Creation-Date: 2016-12-10 20:27+0800\n"
-"PO-Revision-Date: 2016-12-10 20:27+0800\n"
+"PO-Revision-Date: 2016-12-10 21:21+0800\n"
 "Last-Translator: \n"
 "Language-Team: zitonglu\n"
 "Language: zh_CN\n"
@@ -165,7 +165,7 @@ msgstr "版权"
 
 #: includes/paipk1-setting.php:1
 msgid "Submit"
-msgstr "按钮"
+msgstr "提交"
 
 #: includes/paipk1-setting.php:1
 msgid "Single Bottom AD"
