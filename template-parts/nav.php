@@ -35,8 +35,15 @@
 			<ul class="nav navbar-nav navbar-right hidden-xs">
 				<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="glyphicon glyphicon-search"></i></a>
 				<div class="dropdown-menu search-box">
-					<?php get_search_form(); ?>
-				</div>
+					<form role="search" method="get" id="searchform" action="<?php echo esc_url(home_url('/')); ?>">
+						<div class="input-group">
+							<input value="" name="s" id="s" type="text" placeholder="<?php _e('Please enter the search content','paipk1');?>" size="12" class="form-control">
+							<span class="input-group-btn">
+							<input id="searchsubmit" value="go!" type="submit" class="btn btn-default">
+							</span>
+						</div>
+					</form>
+				</div><!-- search-box end -->
 				</li>	
 			</ul>
 		</div>
