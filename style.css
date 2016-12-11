@@ -989,6 +989,8 @@ background:#428bca;
 	/*display:block;*/
 	max-width:100%;
 	height:auto;
+	margin-top: 15px;
+	margin-bottom: 15px;
 }
 /* single - article - AD and moreList */
 .single .article .singlebottomAD{
