@@ -288,6 +288,7 @@ fieldset[disabled] .navbar-mycolor .btn-link:focus {
 #wp-calendar tbody td:hover a{
 	background:#999;
 }
+#wp-calendar tfoot{display:none}
 .widget_meta ul,
 .widget_categories ul,{
 	list-style: none;
