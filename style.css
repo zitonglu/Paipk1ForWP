@@ -258,7 +258,7 @@ fieldset[disabled] .navbar-mycolor .btn-link:focus {
 .calendar_wrap h5,
 .widget_calendar h5,
 .screen-reader-text,
-%#wp-calendar tfoot,
+#wp-calendar tfoot,
 .widget_rss .rss-widget-icon,
 .rss-date,
 .post-date{
