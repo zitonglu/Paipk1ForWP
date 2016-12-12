@@ -265,6 +265,10 @@ function paipk1_quicktags() {
   if (wp_script_is('quicktags')){?>
   <script type="text/javascript">
     QTags.addButton( 'textIndent','text-indent:2em','<p style="text-indent:2em">','</p>');
+    QTags.addButton( 'addH3','<h3>','<h3>','</h3>');
+    QTags.addButton( 'addH4','<h4>','<h4>','</h4>');
+    QTags.addButton( 'addH5','<h5>','<h5>','</h5>');
+    QTags.addButton( 'addH6','<h6>','<h6>','</h6>');
   </script>
 <?php }}
 add_action('admin_print_footer_scripts', 'paipk1_quicktags'); 
