@@ -182,7 +182,7 @@ fieldset[disabled] .navbar-mycolor .btn-link:focus {
 }
 /* sidebar for z-blogPHP */
 .widget,
-#widget_rss li{
+.widget_rss li{
 	margin-bottom:10px;
 	overflow:hidden;
 }
@@ -202,45 +202,45 @@ fieldset[disabled] .navbar-mycolor .btn-link:focus {
 	margin-right:6px;
 	color:#b3e5fc;
 }
-#widget_tag_cloud h5.glyphicon::before{content:'\e042'}
-#widget_categories h5.glyphicon::before,
-#widget_archive h5.glyphicon::before{content:'\e012'}
-#widget_recent_entries h5.glyphicon::before{content:'\270f'}
-#widget_rss h5.glyphicon::before{content:'\e144'}
-#widget_recent_comments h5.glyphicon::before,
+.widget_tag_cloud h5.glyphicon::before{content:'\e042'}
+.widget_categories h5.glyphicon::before,
+.widget_archive h5.glyphicon::before{content:'\e012'}
+.widget_recent_entries h5.glyphicon::before{content:'\270f'}
+.widget_rss h5.glyphicon::before{content:'\e144'}
+.widget_recent_comments h5.glyphicon::before,
 #divComments h5.glyphicon::before{content:'\e111'}
-#widget_pages h5.glyphicon::before{content:'\e143'}
-#widget_meta h5.glyphicon::before{content:'\e019'}
-#widget_search h5.glyphicon::before{content:'\e003'}
-#widget_categories h5.glyphicon::before{content:'\e118'}
-#widget_calendar h5.glyphicon::before{content:'\e109'}
+.widget_pages h5.glyphicon::before{content:'\e143'}
+.widget_meta h5.glyphicon::before{content:'\e019'}
+.widget_search h5.glyphicon::before{content:'\e003'}
+.widget_categories h5.glyphicon::before{content:'\e118'}
+.widget_calendar h5.glyphicon::before{content:'\e109'}
 .widget>div{
 	overflow:hidden;
 }
 .modulename{
 	background:linear-gradient(transparent 49%,#dedede 52%,transparent 0);
 }
-#widget_meta li{
+.widget_meta li{
 	display:inline-block;
 	font-size: 12px;
 	margin-right: 4px;
 }
-#widget_search form input{
+.widget_search form input{
 	color: #666;
 	background: #ededed;
 	border: 1px solid #cccccc;
 	padding-top:2px;
 	padding-bottom:2px;
 }
-#widget_search form #s{
+.widget_search form #s{
 	width:calc(100% - 50px);
 }
-#calendar_wrap{
+.calendar_wrap{
 	position:relative;
     background:#eee;
     background:linear-gradient(-150deg,transparent 1.5em,#eee 0);
 }
-#calendar_wrap::before{
+.calendar_wrap::before{
 	content: '';
     position: absolute;
     top: 0;right: 0;
@@ -255,11 +255,11 @@ fieldset[disabled] .navbar-mycolor .btn-link:focus {
     border-bottom-left-radius: inherit;
     box-shadow:-.2em .2em .3em -.1em rgba(0,0,0,.15);
 }
-#calendar_wrap h5,
-#widget_calendar h5,
+.calendar_wrap h5,
+.widget_calendar h5,
 .screen-reader-text,
-#wp-calendar tfoot,
-#widget_rss .rss-widget-icon,
+%#wp-calendar tfoot,
+.widget_rss .rss-widget-icon,
 .rss-date,
 .post-date{
 	display:none;
@@ -288,27 +288,21 @@ fieldset[disabled] .navbar-mycolor .btn-link:focus {
 #wp-calendar tbody td:hover a{
 	background:#999;
 }
-#divFavorites ul,
-#widget_meta ul,
-#divLinkage ul,
-#widget_categories ul,
-#divMisc ul{
+.widget_meta ul,
+.widget_categories ul,{
 	list-style: none;
 	display: inline-block;
 }
-#widget_meta ul,
-#divFavorites ul,
-#divLinkage ul,
-#widget_categories ul,
-#divMisc ul{
+.widget_meta ul,
+.widget_categories ul{
 	padding-left:0;
 	margin-bottom:0px;
 }
-#divFavorites li,
-#divLinkage li,
-#widget_categories li,
-#widget_tag_cloud a,
-#widget_nav_menu li{
+.divFavorites li,
+.divLinkage li,
+.widget_categories li,
+.widget_tag_cloud a,
+.widget_nav_menu li{
 	margin: 0 3px 3px 0;
 	padding: 1px 9px 3px;
 	display: inline-block;
@@ -317,37 +311,27 @@ fieldset[disabled] .navbar-mycolor .btn-link:focus {
 	background:#ededed;
 	border:1px solid #cccccc;
 }
-#divFavorites a,
-#divLinkage a,
-#widget_categories a,
-#widget_tag_cloud a,
-#widget_nav_menu a{
+.widget_categories a,
+.widget_tag_cloud a,
+.widget_nav_menu a{
 	color: #666;
 }
-#divFavorites li:hover,
-#divLinkage li:hover,
-#widget_categories li:hover,
-#widget_tag_cloud a:hover,
-#widget_nav_menu li:hover{
+.widget_categories li:hover,
+.widget_tag_cloud a:hover,
+.widget_nav_menu li:hover{
 	background-color:#428bca;
 	color:#fff;
 }
-#divFavorites li:hover a,
-#divLinkage li:hover a,
-#widget_categories li:hover a,
-#widget_tag_cloud a:hover,
-#widget_nav_menu a:hover{
+.widget_categories li:hover a,
+.widget_tag_cloud a:hover,
+.widget_nav_menu a:hover{
 	text-decoration: none;
 	color:#fff;
 }
-#divMisc li{
-	display: inline-block;
-	padding: 3px;
-}
 #divComments ul,
-#widget_pages ul,
-#widget_recent_entries ul,
-#widget_rss ul{
+.widget_pages ul,
+.widget_recent_entries ul,
+.widget_rss ul{
 	padding-left:0;
 }
 #divComments>div{
@@ -372,20 +356,20 @@ fieldset[disabled] .navbar-mycolor .btn-link:focus {
 #divComments small{
 	color:#999;
 }
-#widget_recent_entries li:hover,
-#widget_rss li:hover,
-#widget_pages li:hover{
+.widget_recent_entries li:hover,
+.widget_rss li:hover,
+.widget_pages li:hover{
 	border-color:#98699b;
 }
-#widget_recent_entries li:hover p,
-#widget_rss li:hover p,
-#widget_pages li:hover p{
+.widget_recent_entries li:hover p,
+.widget_rss li:hover p,
+.widget_pages li:hover p{
 	background-color:#98699b;
 	color: #fff;
 }
-#widget_recent_entries li a,
-#widget_rss li a,
-#widget_pages li a{
+.widget_recent_entries li a,
+.widget_rss li a,
+.widget_pages li a{
 	display:block;
 	margin-left:2px;
 	overflow:hidden;
@@ -394,9 +378,9 @@ fieldset[disabled] .navbar-mycolor .btn-link:focus {
 	color:#555;
 	line-height:1.6;
 }
-#widget_recent_entries li a::before,
-#widget_rss li a:before,
-#widget_pages li a:before{
+.widget_recent_entries li a::before,
+.widget_rss li a:before,
+.widget_pages li a:before{
 	position:relative;
 	margin-bottom:2px;
 	margin-right:8px;
@@ -408,31 +392,31 @@ fieldset[disabled] .navbar-mycolor .btn-link:focus {
 	box-shadow:0 1px 2px #757575;
 	text-decoration: none;
 }
-#widget_recent_entries li:nth-child(n) a::before{
+.widget_recent_entries li:nth-child(n) a::before{
 	border:1px solid #fd5f00;
 }
-#widget_recent_entries li:nth-child(n) a:hover{
+.widget_recent_entries li:nth-child(n) a:hover{
 	color:#fd5f00;
 }
-#widget_recent_entries li:nth-child(2n) a::before{
+.widget_recent_entries li:nth-child(2n) a::before{
 	border:1px solid #00a635;
 }
-#widget_recent_entries li:nth-child(2n) a:hover{
+.widget_recent_entries li:nth-child(2n) a:hover{
 	color:#00a635;
 }
-#widget_recent_entries li:nth-child(3n) a::before{
+.widget_recent_entries li:nth-child(3n) a::before{
 	border:1px solid #b92400;
 }
-#widget_recent_entries li:nth-child(3n) a:hover{
+.widget_recent_entries li:nth-child(3n) a:hover{
 	color:#b92400;
 }
-#widget_recent_entries li:nth-child(4n) a::before{
+.widget_recent_entries li:nth-child(4n) a::before{
 	border:1px solid #00a9da;
 }
-#widget_recent_entries li:nth-child(4n) a:hover{
+.widget_recent_entries li:nth-child(4n) a:hover{
 	color:#00a9da;
 }
-#divArchives li{
+.divArchives li{
 	width: 49%;
 	display: inline-block;
 	text-align: center;
@@ -441,8 +425,8 @@ fieldset[disabled] .navbar-mycolor .btn-link:focus {
 .tag-count{
 	font-size: 10px;
 }
-#widget_rss li a:hover
-#widget_pages li a:hover{
+.widget_rss li a:hover
+.widget_pages li a:hover{
 	color:#428bca;
 }
 .rssSummary{
@@ -462,6 +446,7 @@ fieldset[disabled] .navbar-mycolor .btn-link:focus {
 }
 #widget_archive select,
 #widget_categories select{width:100%}
+.index aside.col-sm-3 div .widget:first-child{margin-bottom:-0.5px;}
 /* index - pic */
 #index-pic .article{
 	padding:0;
