@@ -33,7 +33,9 @@ a:hover,a:focus{color:#555}
 #index-pic .post-box .post-text,#index-pic .post-nopic:hover,#index-pic .post-nopic,
 a,a:hover,a:focus,.single .article .author-box img.avatar:hover,
 .single .article .author-box img.avatar:focus,
-.single .article .author-box img.avatar{
+.single .article .author-box img.avatar,
+.shopA:hover span,.shopA span,
+.shopA:hover span del,.shopA span del{
 	transition:all 0.2s ease-in-out;
 }
 .more-text-box p a:hover,.more-text-box p a:focus,
@@ -972,11 +974,10 @@ background:#428bca;
 	margin:0;
 }
 .single .article .section img{
-	/*display:block;*/
 	max-width:100%;
 	height:auto;
-	margin-top: 15px;
-	margin-bottom: 15px;
+	margin-top:1em;
+	margin-bottom:1em;
 }
 /* single - article - AD and moreList */
 .single .article .singlebottomAD{
@@ -1361,3 +1362,33 @@ div.prism-show-language > div.prism-show-language-label[data-language]{
 	float:left;
 	margin-right:1.625em;
 }
+.shopA{
+	display:block;
+	border: 1px solid #dedede;
+	padding: .3em;
+	margin: .9em auto;
+	max-width: 420px;
+	max-width: min-content;
+}
+.single .article .section .shopA img{margin:0}
+.shopA span{
+	display:block;
+	background:#ddd;
+	color:#666;
+	text-align:right;
+	line-height:2;
+	font-weight:700;
+	padding-right:1em;
+	padding-left:1em;
+}
+.shopA span del{
+	font-weight:100;
+	font-size:90%;
+	float:left;
+	color:#999;
+}
+.shopA:hover span{
+	background:#428bca;
+	color: #f8f8f8;
+}
+.shopA:hover span del{color: #f8f8f8}
